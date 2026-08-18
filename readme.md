@@ -26,7 +26,7 @@ voltaexpressbrasil-digital/
 │   ├── anunciar-caminhao/              # Elementos visuais do fluxo de oferta de frete
 │   ├── buscar-carga/                   # Elementos visuais de busca de fretes
 │   ├── persona/                        # Mapeamento do perfil e dores do motorista
-│   └── public/                         # Artes e vantagems em imagem (.png)
+│   └── public/                         # Artes e vantagens em imagem (.png)
 ├── quero-transportar-embarcador/       # Assets da Persona 2: Empresas / Embarcadores
 │   ├── anunciar-carga/                 # Elementos visuais do fluxo de cadastro de carga
 │   ├── buscar-caminhao/                # Elementos visuais de busca de veículos
@@ -41,6 +41,8 @@ voltaexpressbrasil-digital/
     └── veb-painel/                     # Screenshots e conceitos visuais do Dashboard
 ```
 
+---
+
 ## 🎯 Padrões de Uso e Governança
 
 ### 1. Padronização de Nomenclatura de Arquivos
@@ -54,6 +56,28 @@ Para evitar quebras de URL e garantir compatibilidade cross-platform (web/mobile
 
 ---
 
+## 🌿 Workflow de Branches
+
+Para manter o repositório organizado e evitar conflitos em arquivos binários, adotamos o seguinte fluxo de trabalho:
+
+* **`main`**: Branch de produção e estável. Contém apenas assets homologados e aprovados que estão prontos para consumo na aplicação ou campanhas ativas.
+* **`developer-mvp`**: Branch de integração do MVP. Utilizada para centralizar arquivos de trabalho, mídias de validação e rascunhos de documentação antes de subir para a `main`.
+* **`features/versao-docs`**: Branch dedicada para melhorias estruturais, criação e atualização de documentações, refatoração de nomes de arquivos e ajustes de governança no `README.md`.
+
+---
+
+## 📋 Backlog de Tarefas
+
+Lista de pendências e melhorias para governança deste repositório:
+
+- [ ] **Padronização de Nomenclatura:** Refatorar nomes de arquivos antigos que contenham espaços, acentos ou parênteses para o padrão `kebab-case`.
+- [ ] **Limpeza de Duplicados:** Identificar e remover imagens duplicadas ou versões antigas sem uso.
+- [ ] **Otimização de Imagens:** Compactar artes grandes nas pastas de campanhas (`veb-mkt-1`, `veb-mkt-2`) convertendo para `.webp` ou reduzindo o peso do `.png`.
+- [ ] **Configuração do Git LFS:** Validar se todos os arquivos `.mp4` da pasta `midias/videos` estão sendo rastreados corretamente pelo Git LFS.
+- [ ] **Mapeamento do Raw CDN:** Criar um guia rápido relacionando os links diretos das principais logos e banners para facilitar o consumo pelos devs no frontend.
+
+---
+
 ## 🚀 Como Consumir esses Assets na Aplicação Web
 
 Você pode referenciar as imagens diretamente no frontend ou na documentação utilizando o link bruto (*Raw*) do GitHub:
@@ -61,11 +85,12 @@ Você pode referenciar as imagens diretamente no frontend ou na documentação u
 ```html
 <!-- Exemplo de consumo da Logo Oficial -->
 <img 
-  src="[https://raw.githubusercontent.com/VoltaExpress/voltaexpressbrasil-digital/main/voltaexpressbrasil/veb-logo/logo-principal.png](https://raw.githubusercontent.com/VoltaExpress/voltaexpressbrasil-digital/main/voltaexpressbrasil/veb-logo/logo-principal.png)" 
+  src="https://raw.githubusercontent.com/VoltaExpress/voltaexpressbrasil-digital/main/voltaexpressbrasil/veb-logo/logo-principal.png" 
   alt="Volta Express Brasil"
 />
 ```
 
+---
 
 ## 🛡️ Contribuição e Licença
 
