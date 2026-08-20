@@ -221,26 +221,26 @@ export const fileData = [
                     { name: "meu-caminhao-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/meu-caminhao-1.jpg", insight: "Foto de perfil do veículo para painel do motorista." }
                 ]
             },
-           {
-  name: "buscar-carga",
-  type: "folder",
-  children: [
-    { name: "banner-caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/banner-caixas.png", insight: "Banner promocional da vitrine de cargas disponíveis." },
-    { name: "caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caixas.png", insight: "Ilustração de mercadorias para filtro rápido de categorias." },
-    { name: "caminhao-caixas-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-1.jpg", insight: "Imagem de veículo carregado com caixas e mercadorias." },
-    { name: "caminhao-caixas-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-2.jpg", insight: "Variação de foto de caminhão em processo de carga." },
-    { name: "caminhao-caixas-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-3.jpg", insight: "Ativo visual de transporte de frete fracionado." },
-    { name: "caminhao-caixas-4.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-4.jpg", insight: "Fotografia de composição de veículo para vitrine de fretes." },
-    { name: "caminhao-caixas-5.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-5.jpg", insight: "Imagem demonstrativa de carga pronta para embarque." },
-    { name: "deposito-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-1.jpg", insight: "Fotografia de centro de distribuição e depósito." },
-    { name: "deposito-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-2.jpg", insight: "Visão interna de pátio e logística de armazenamento." },
-    { name: "deposito-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-3.jpg", insight: "Ativo de suporte visual para localização de fretes em galpões." },
-    { name: "deposito-4.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-4.jpg", insight: "Imagem de operações logísticas em centro de transbordo." },
-    { name: "estoque-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estoque-1.jpg", insight: "Ativo visual de mercadorias em estoque aguardando transporte." },
-    { name: "estoque-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estoque-2.jpg", insight: "Fotografia de paletes e produtos armazenados." },
-    { name: "estrada.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estrada.jpg", insight: "Fotografia panorâmica de rodovia para compor a busca de rotas." }
-  ]
-},
+            {
+                name: "buscar-carga",
+                type: "folder",
+                children: [
+                    { name: "banner-caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/banner-caixas.png", insight: "Banner promocional da vitrine de cargas disponíveis." },
+                    { name: "caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caixas.png", insight: "Ilustração de mercadorias para filtro rápido de categorias." },
+                    { name: "caminhao-caixas-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-1.jpg", insight: "Imagem de veículo carregado com caixas e mercadorias." },
+                    { name: "caminhao-caixas-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-2.jpg", insight: "Variação de foto de caminhão em processo de carga." },
+                    { name: "caminhao-caixas-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-3.jpg", insight: "Ativo visual de transporte de frete fracionado." },
+                    { name: "caminhao-caixas-4.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-4.jpg", insight: "Fotografia de composição de veículo para vitrine de fretes." },
+                    { name: "caminhao-caixas-5.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-5.jpg", insight: "Imagem demonstrativa de carga pronta para embarque." },
+                    { name: "deposito-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-1.jpg", insight: "Fotografia de centro de distribuição e depósito." },
+                    { name: "deposito-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-2.jpg", insight: "Visão interna de pátio e logística de armazenamento." },
+                    { name: "deposito-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-3.jpg", insight: "Ativo de suporte visual para localização de fretes em galpões." },
+                    { name: "deposito-4.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-4.jpg", insight: "Imagem de operações logísticas em centro de transbordo." },
+                    { name: "estoque-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estoque-1.jpg", insight: "Ativo visual de mercadorias em estoque aguardando transporte." },
+                    { name: "estoque-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estoque-2.jpg", insight: "Fotografia de paletes e produtos armazenados." },
+                    { name: "estrada.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estrada.jpg", insight: "Fotografia panorâmica de rodovia para compor a busca de rotas." }
+                ]
+            },
             {
                 name: "persona",
                 type: "folder",

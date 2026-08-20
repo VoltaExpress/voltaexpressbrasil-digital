@@ -1,4 +1,12 @@
-/* Estilização de Scrollbar Personalizada */
+/* Customização do Volta Express Brasil | Hub Dashboard */
+:root {
+    --ve-blue: #0052cc;
+    --ve-blue-hover: #0043a8;
+    --ve-dark-sidebar: #0b1120;
+    --ve-border: rgba(226, 232, 240, 0.8);
+}
+
+/* Scrollbar Personalizada Global */
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -17,7 +25,73 @@
     background: rgba(148, 163, 184, 0.5);
 }
 
-/* Prism Overrides */
+/* Utilitário para ocultar scrollbars estéticas mantendo a rolagem horizontal ativa (Mobile Header) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Header & App Switcher Refinado */
+.app-switcher-group {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    border-radius: 0.5rem;
+}
+
+.app-switcher-link {
+    transition: all 0.2s ease-in-out;
+}
+
+.app-switcher-link:hover {
+    background: rgba(51, 65, 85, 0.8);
+    color: #ffffff;
+}
+
+/* Callout de Insights de Produto */
+.insight-callout {
+    background: #f8fafc;
+    border-left: 4px solid var(--ve-blue);
+    border-top: 1px solid var(--ve-border);
+    border-right: 1px solid var(--ve-border);
+    border-bottom: 1px solid var(--ve-border);
+    border-radius: 0.5rem;
+}
+
+/* Customização da Sidebar */
+aside.custom-sidebar {
+    background-color: var(--ve-dark-sidebar) !important;
+}
+
+.tree-file-item:hover {
+    background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+.tree-file-item.active {
+    background-color: rgba(0, 82, 204, 0.15) !important;
+    color: #60a5fa !important;
+    border-left: 3px solid #3b82f6;
+    font-weight: 600;
+}
+
+/* KPI Cards para o Painel Inicial de Decisão */
+.kpi-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+/* Overrides do Bloco de Código Prism JS e Responsividade */
 pre[class*="language-"] {
     border-radius: 0.75rem !important;
     margin: 0 !important;
@@ -25,39 +99,20 @@ pre[class*="language-"] {
     font-family: 'Fira Code', monospace !important;
     background: #0f172a !important;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    max-width: 100%;
+    overflow-x: auto !important;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
-/* Markdown Custom Content Styles */
-.markdown-body h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #0f172a;
+/* Renderizador de Tabelas Excel e Container com Scroll Touch */
+.excel-table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0.5rem;
 }
 
-.markdown-body h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: #1e293b;
-}
-
-.markdown-body p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    font-size: 0.875rem;
-    color: #334155;
-}
-
-.markdown-body ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-}
-
-/* Tabela Renderizada do SheetJS */
 .excel-table {
     width: 100%;
     border-collapse: collapse;
@@ -84,4 +139,12 @@ pre[class*="language-"] {
 
 .excel-table tr:hover {
     background-color: #f8fafc;
+}
+
+/* Ajustes de Mídia e Responsividade Visual no Viewer */
+#viewerContainer img,
+#viewerContainer video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
 }
