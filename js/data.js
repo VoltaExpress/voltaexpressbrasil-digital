@@ -79,13 +79,24 @@ export const fileData = [
                     { name: "legenda2-motoristas.jpeg", type: "file", ext: "img", path: "assets/arquivos/qa-infos/legenda2-motoristas.jpeg", insight: "Legenda e especificação das marcas visuais do mapa de motoristas." },
                     { name: "legenda3.jpg", type: "file", ext: "img", path: "assets/arquivos/qa-infos/legenda3.jpg", insight: "Elemento visual de legenda para instrução de uso no mapa." },
                     { name: "volta-express-capa.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/volta-express-capa.png", insight: "Imagem de capa oficial para materiais do sistema." },
-                    ...Array.from({ length: 18 }, (_, i) => ({
-                        name: `Screenshot_QA_${i + 1}.png`,
-                        type: "file",
-                        ext: "img",
-                        path: `assets/arquivos/qa-infos/Screenshot_${i + 1}.png`,
-                        insight: "Registro visual de auditoria de qualidade, navegação e testes de interface."
-                    }))
+                    { name: "Screenshot 2025-04-14 163923.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-04-14 163923.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-04-14 194413.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-04-14 194413.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-04-14 194930.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-04-14 194930.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-05-08 160947.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-05-08 160947.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-05-13 100011.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-05-13 100011.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-05-13 192358.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-05-13 192358.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-05-13 192505.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-05-13 192505.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-05-13 193145.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-05-13 193145.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-05-13 193211.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-05-13 193211.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-07-08 011647.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-07-08 011647.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-07-08 011710.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-07-08 011710.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-07-08 011735.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-07-08 011735.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-07-08 162533.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-07-08 162533.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-07-08 162720.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-07-08 162720.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-08-07 010752.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-08-07 010752.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-09-03 171930.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-09-03 171930.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-09-04 105037.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-09-04 105037.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." },
+                    { name: "Screenshot 2025-09-04 120423.png", type: "file", ext: "img", path: "assets/arquivos/qa-infos/Screenshot 2025-09-04 120423.png", insight: "Registro visual de auditoria de qualidade, navegação e testes de interface." }
                 ]
             },
             {
@@ -93,7 +104,7 @@ export const fileData = [
                 type: "folder",
                 children: [
                     { name: "imagem.png", type: "file", ext: "img", path: "assets/arquivos/qa-refs/imagem.png", insight: "Referência visual de layout para telas do sistema." },
-                    { name: "tamanhos-caminhoes-mudancas.png", type: "file", ext: "img", path: "assets/arquivos/qa-refs/tamanhos-caminhoes-mudancas.png", insight: "Tabela técnica de referência de dimensões e capacidades dos veículos de frete." }
+                    { name: "tamanhos-caminhoes-mudancas.jpg", type: "file", ext: "img", path: "assets/arquivos/qa-refs/tamanhos-caminhoes-mudancas.jpg", insight: "Tabela técnica de referência de dimensões e capacidades dos veículos de frete." }
                 ]
             },
             {
@@ -184,32 +195,52 @@ export const fileData = [
                 name: "anunciar-caminhao",
                 type: "folder",
                 children: [
-                    { name: "anuncio-Caminhao-2.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anuncio-Caminhao-2.png", insight: "Interface do formulário de anúncio de veículo para a persona Caminhoneiro." },
-                    { name: "anuncio-Caminhao-3.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anuncio-Caminhao-3.png", insight: "Variação de campos de detalhes do anúncio de frota." },
-                    ...Array.from({ length: 20 }, (_, i) => ({
-                        name: `caminhao_especial_${i + 1}.jpg`,
-                        type: "file",
-                        ext: "img",
-                        path: `assets/quero-carregar-transportador/anunciar-caminhao/caminhao_${i + 1}.jpg`,
-                        insight: "Fotografia de composição da frota para opções de seleção do motorista."
-                    }))
+                    { name: "anunciar-caminhao-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-1.jpg", insight: "Interface e elementos visuais do fluxo de oferta de veículos." },
+                    { name: "anunciar-caminhao-2-Hi-Way da Iveco.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-2-Hi-Way da Iveco.jpg", insight: "Modelo de caminhão Iveco Hi-Way para seleção no anúncio de frota." },
+                    { name: "anunciar-caminhao-3-Mercedes-Benz L 1111.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-3-Mercedes-Benz L 1111.jpg", insight: "Modelo clássico Mercedes-Benz L 1111 para cadastro no sistema." },
+                    { name: "anunciar-caminhao-4-VW-Titan-19330.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-4-VW-Titan-19330.jpg", insight: "Modelo Volkswagen Titan 19330 para especificação de frete." },
+                    { name: "anunciar-caminhao-5-W990 da Kenworth.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-5-W990 da Kenworth.jpg", insight: "Modelo Kenworth W990 para opções de veículos pesados." },
+                    { name: "anunciar-caminhao-6.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-6.png", insight: "Elemento de interface do formulário de anúncio de caminhão." },
+                    { name: "anunciar-caminhao-7.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-7.png", insight: "Variação gráfica para o fluxo de cadastro do transportador." },
+                    { name: "anunciar-caminhao-8.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-8.jpg", insight: "Fotografia temática de veículo rodoviário para anúncio." },
+                    { name: "anunciar-caminhao-9.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-9.jpg", insight: "Foto complementar de caminhão para composição da frota." },
+                    { name: "caminhao-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/caminhao-1.jpg", insight: "Ativo visual de caminhão para vitrine de veículos." },
+                    { name: "caminhao-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/caminhao-2.jpg", insight: "Imagem de suporte para perfil de frota comercial." },
+                    { name: "caminhao-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/caminhao-3.jpg", insight: "Fotografia de veículo de transporte para seleção." },
+                    { name: "caminhao-medio-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/caminhao-medio-1.jpg", insight: "Opção de veículo de médio porte para frete urbano e regional." },
+                    { name: "carreta-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/carreta-1.jpg", insight: "Modelo de carreta pesada para frete de grande volume." },
+                    { name: "carreta-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/carreta-2.jpg", insight: "Imagem promocional de carreta articulada." },
+                    { name: "carreta-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/carreta-3.jpg", insight: "Fotografia de carreta de longa distância." },
+                    { name: "depositions-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/depositions-3.jpg", insight: "Ativo de prova social e depoimento de caminhoneiro." },
+                    { name: "frete-pequeno-1.webp", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/frete-pequeno-1.webp", insight: "Opção de veículo utilitário para pequenos fretes." },
+                    { name: "frete-pequeno-2.webp", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/frete-pequeno-2.webp", insight: "Ativo visual para categoria de transporte leve." },
+                    { name: "frete-pequeno-3.webp", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/frete-pequeno-3.webp", insight: "Elemento gráfico de suporte para fretes de pequeno porte." },
+                    { name: "frete-pequeno-4.jpeg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/frete-pequeno-4.jpeg", insight: "Foto complementar de utilitário comercial leve." },
+                    { name: "frete-pequeno-5.webp", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/frete-pequeno-5.webp", insight: "Ativo em formato leve para catálogo de fretes pequenos." },
+                    { name: "logistic-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/logistic-2.jpg", insight: "Foto temática de operação e logística rodoviária." },
+                    { name: "meu-caminhao-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/meu-caminhao-1.jpg", insight: "Foto de perfil do veículo para painel do motorista." }
                 ]
             },
-            {
-                name: "buscar-carga",
-                type: "folder",
-                children: [
-                    { name: "banner-caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/banner-caixas.png", insight: "Banner promocional da vitrine de cargas disponíveis." },
-                    { name: "caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caixas.png", insight: "Ilustração de mercadorias para filtro rápido." },
-                    ...Array.from({ length: 11 }, (_, i) => ({
-                        name: `carga_foto_${i + 1}.jpg`,
-                        type: "file",
-                        ext: "img",
-                        path: `assets/quero-carregar-transportador/buscar-carga/carga_${i + 1}.jpg`,
-                        insight: "Ativo visual da lista de oportunidades de fretes disponíveis na rota."
-                    }))
-                ]
-            },
+           {
+  name: "buscar-carga",
+  type: "folder",
+  children: [
+    { name: "banner-caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/banner-caixas.png", insight: "Banner promocional da vitrine de cargas disponíveis." },
+    { name: "caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caixas.png", insight: "Ilustração de mercadorias para filtro rápido de categorias." },
+    { name: "caminhao-caixas-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-1.jpg", insight: "Imagem de veículo carregado com caixas e mercadorias." },
+    { name: "caminhao-caixas-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-2.jpg", insight: "Variação de foto de caminhão em processo de carga." },
+    { name: "caminhao-caixas-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-3.jpg", insight: "Ativo visual de transporte de frete fracionado." },
+    { name: "caminhao-caixas-4.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-4.jpg", insight: "Fotografia de composição de veículo para vitrine de fretes." },
+    { name: "caminhao-caixas-5.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caminhao-caixas-5.jpg", insight: "Imagem demonstrativa de carga pronta para embarque." },
+    { name: "deposito-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-1.jpg", insight: "Fotografia de centro de distribuição e depósito." },
+    { name: "deposito-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-2.jpg", insight: "Visão interna de pátio e logística de armazenamento." },
+    { name: "deposito-3.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-3.jpg", insight: "Ativo de suporte visual para localização de fretes em galpões." },
+    { name: "deposito-4.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/deposito-4.jpg", insight: "Imagem de operações logísticas em centro de transbordo." },
+    { name: "estoque-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estoque-1.jpg", insight: "Ativo visual de mercadorias em estoque aguardando transporte." },
+    { name: "estoque-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estoque-2.jpg", insight: "Fotografia de paletes e produtos armazenados." },
+    { name: "estrada.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estrada.jpg", insight: "Fotografia panorâmica de rodovia para compor a busca de rotas." }
+  ]
+},
             {
                 name: "persona",
                 type: "folder",
