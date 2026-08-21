@@ -3,10 +3,10 @@ import { fileData } from "./data.js";
 import { Renderers } from "./renderers.js";
 
 export class UIController {
-   constructor() {
+    constructor() {
         this.treeContainer = document.getElementById("treeContainer");
         this.searchInput = document.getElementById("fileSearch");
-        this.currentSelectedFile = null; 
+        this.currentSelectedFile = null;
         window.uiController = this;
     }
 
@@ -39,7 +39,6 @@ export class UIController {
         const ul = document.createElement("ul");
         ul.className = "space-y-1 pl-2 border-l border-slate-800/60";
 
-        // Dentro do método createTreeNodes(nodes) no js/ui.js:
         const gridFolders = [
             "qa-infos",
             "qa-refs",
@@ -72,6 +71,7 @@ export class UIController {
 
         nodes.forEach(node => {
             const li = document.createElement("li");
+            const nodeDisplayLabel = node.label || node.name; // <--- PRIORIZA RÓTULO AMIGÁVEL
 
             if (node.type === "folder") {
                 const isGridFolder = gridFolders.includes(node.name);
@@ -79,14 +79,13 @@ export class UIController {
                 const folderDiv = document.createElement("div");
                 folderDiv.className = "flex items-center space-x-2 py-1.5 px-2 rounded cursor-pointer hover:bg-slate-800/60 text-slate-300 font-medium transition select-none text-xs";
                 folderDiv.innerHTML = `
-              <i class="fa-solid fa-folder text-blue-400 text-xs"></i>
-              <span class="truncate">${node.name}</span>
-            `;
+                    <i class="fa-solid fa-folder text-blue-400 text-xs"></i>
+                    <span class="truncate" title="${nodeDisplayLabel}">${nodeDisplayLabel}</span>
+                `;
 
                 const childUlContainer = document.createElement("div");
                 childUlContainer.className = "hidden";
 
-                // Só constrói a subárvore se NÃO for uma pasta configurada para Grid
                 if (node.children && !isGridFolder) {
                     childUlContainer.appendChild(this.createTreeNodes(node.children));
                 }
@@ -94,13 +93,11 @@ export class UIController {
                 folderDiv.addEventListener("click", (e) => {
                     e.stopPropagation();
 
-                    // INTERCEPTAÇÃO: Se for pasta do modo Grid, abre a galeria e cancela o fluxo padrão
                     if (isGridFolder) {
                         this.openFolderGrid(node);
                         return;
                     }
 
-                    // Comportamento padrão de expandir/recolher
                     childUlContainer.classList.toggle("hidden");
                     const icon = folderDiv.querySelector("i");
                     if (icon) {
@@ -111,7 +108,6 @@ export class UIController {
 
                 li.appendChild(folderDiv);
 
-                // Adiciona o container filho no DOM apenas se não for pasta de Grid
                 if (!isGridFolder) {
                     li.appendChild(childUlContainer);
                 }
@@ -122,9 +118,9 @@ export class UIController {
                 const iconClass = CONFIG.icons[node.ext] || CONFIG.icons.default || "fa-file";
 
                 fileDiv.innerHTML = `
-              <i class="fa-solid ${iconClass}"></i>
-              <span class="truncate">${node.name}</span>
-            `;
+                    <i class="fa-solid ${iconClass}"></i>
+                    <span class="truncate" title="${nodeDisplayLabel}">${nodeDisplayLabel}</span>
+                `;
 
                 fileDiv.addEventListener("click", (e) => {
                     e.stopPropagation();
@@ -134,7 +130,6 @@ export class UIController {
                     fileDiv.classList.add("bg-blue-600/20", "text-blue-300", "font-semibold", "active");
                     this.openFile(node);
 
-                    // Fechar drawer no mobile ao selecionar um arquivo
                     this.closeMobileSidebar();
                 });
 
@@ -148,13 +143,13 @@ export class UIController {
     }
 
     openFolderGrid(folder) {
-        // Atualiza o cabeçalho
+        const folderTitle = folder.label || folder.name;
         const fileNameEl = document.getElementById("currentFileName");
         const filePathEl = document.getElementById("currentFilePath");
         const insightTextEl = document.getElementById("insightText");
         const fileTypeIconEl = document.getElementById("fileTypeIcon");
 
-        if (fileNameEl) fileNameEl.textContent = folder.name;
+        if (fileNameEl) fileNameEl.textContent = folderTitle;
         if (filePathEl) filePathEl.textContent = `/${folder.path || folder.name}`;
         if (insightTextEl) insightTextEl.textContent = `Galeria com ${folder.children ? folder.children.length : 0} evidências e ativos visuais do diretório.`;
 
@@ -165,27 +160,23 @@ export class UIController {
         const container = document.getElementById("viewerContainer");
         if (!container) return;
 
-        // Renderiza a grid utilizando o módulo Renderers
         Renderers.renderFolderGrid(folder, container);
-
-        // Fecha o menu mobile se estiver aberto
         this.closeMobileSidebar();
     }
 
     openFile(file) {
         this.currentSelectedFile = file;
+        const fileTitle = file.label || file.name;
 
-        // Atualizar títulos e caminhos
         const fileNameEl = document.getElementById("currentFileName");
         const filePathEl = document.getElementById("currentFilePath");
         const insightTextEl = document.getElementById("insightText");
         const fileTypeIconEl = document.getElementById("fileTypeIcon");
 
-        if (fileNameEl) fileNameEl.textContent = file.name;
+        if (fileNameEl) fileNameEl.textContent = fileTitle;
         if (filePathEl) filePathEl.textContent = `/${file.path}`;
         if (insightTextEl) insightTextEl.textContent = file.insight || "Ativo estratégico registrado no repositório da Volta Express.";
 
-        // Atualizar o ícone do cabeçalho dinamicamente
         if (fileTypeIconEl) {
             const iconClass = CONFIG.icons[file.ext] || CONFIG.icons.default || "fa-file";
             fileTypeIconEl.innerHTML = `<i class="fa-solid ${iconClass}"></i>`;
@@ -195,8 +186,7 @@ export class UIController {
         if (!container) return;
         container.innerHTML = "";
 
-        // Renderizar conteúdo pelo formato
-        if (["pdf", "doc"].includes(file.ext)) this.renderDocumentFile(file); // <--- ATUALIZADO
+        if (["pdf", "doc", "docx"].includes(file.ext)) this.renderDocumentFile(file);
         else if (file.ext === "img") Renderers.renderImage(file, container);
         else if (file.ext === "video") Renderers.renderVideo(file, container);
         else if (["js", "css", "json"].includes(file.ext)) Renderers.renderCode(file, container);
@@ -208,7 +198,6 @@ export class UIController {
         const viewer = document.getElementById("viewerContainer");
         if (!viewer) return;
 
-        // Renderização de PDF via iframe
         if (file.ext === "pdf") {
             viewer.innerHTML = `
                 <div class="w-full h-full bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col min-h-[600px]">
@@ -218,7 +207,6 @@ export class UIController {
             return;
         }
 
-        // Renderização de DOC / DOCX via Mammoth.js
         if (file.ext === "doc" || file.ext === "docx") {
             viewer.innerHTML = `
                 <div class="p-8 text-center text-slate-500 flex items-center justify-center gap-2">
@@ -269,13 +257,17 @@ export class UIController {
 
             function filterNodes(nodes) {
                 return nodes.reduce((acc, node) => {
+                    const matchLabel = node.label ? node.label.toLowerCase().includes(term) : false;
+                    const matchName = node.name.toLowerCase().includes(term);
+                    const matchInsight = node.insight ? node.insight.toLowerCase().includes(term) : false;
+
                     if (node.type === "file") {
-                        if (node.name.toLowerCase().includes(term) || (node.insight && node.insight.toLowerCase().includes(term))) {
+                        if (matchName || matchLabel || matchInsight) {
                             acc.push(node);
                         }
                     } else if (node.children) {
                         const filteredChildren = filterNodes(node.children);
-                        if (filteredChildren.length > 0) {
+                        if (filteredChildren.length > 0 || matchName || matchLabel) {
                             acc.push({ ...node, children: filteredChildren });
                         }
                     }
@@ -329,4 +321,3 @@ export class UIController {
         }
     }
 }
-
