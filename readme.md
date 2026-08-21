@@ -49,20 +49,28 @@ voltaexpressbrasil-digital/
 │
 ├── js/                           # 🧠 CAMADA DE APLICAÇÃO (ES6 Modules)
 │   ├── config.js                 # Constantes globais, caminhos base e ícones por extensão
-│   ├── data.js                   # [DATA] Matriz de dados dos 250 ativos e catálogo de insights
-│   ├── renderers.js              # [VIEWER] Motores de renderização (PDF, Excel, Video, Code, Img)
-│   ├── ui.js                     # [CONTROLLER] Lógica da árvore interativa, busca e estados da UI
+│   ├── data.js                   # [DATA] Matriz de dados (Ativos físicos + Atalhos de mídias/sistemas)
+│   ├── renderers.js              # [VIEWER] Motores de renderização (PDF, Excel, Video, Code, Img, DOCX, Cards)
+│   ├── ui.js                     # [CONTROLLER] Lógica da árvore interativa, busca e gerenciamento da UI
 │   └── main.js                   # [BOOTSTRAP] Ponto de entrada de inicialização
 │
-└── assets/                       # 📦 CONTÊINER OFICIAL DE ATIVOS (250 Arquivos / 38 Pastas)
+├── 🌐 SEÇÕES VIRTUAIS & ATALHOS EM NUVEM (MAPEADOS VIA DATA/JS)
+│   ├── posicionamento-digital/   # 📌 Redes Sociais, GitHub, E-mails oficiais e Mídias
+│   ├── pesquisa-cliente-forms/   # 📋 Catálogo de 23 Formulários e Respostas do Microsoft Forms / OneDrive
+│   ├── benchmarking-produto/     # 💡 Requisitos SaaS (Doc com link Google Docs + Video Player YouTube)
+│   └── sistemas/                 # ⚙️ Infraestrutura, Hospedagem e DNS (Netlify & GoDaddy)
+│       ├── netlify/              #    -> Deploys, Zonas de DNS, SSL e Docs do Netlify
+│       └── godaddy/              #    -> Criador de Sites e Servidores GoDaddy
+│
+└── assets/                       # 📦 CONTÊINER OFICIAL DE ATIVOS FÍSICOS
     ├── arquivos/                 # Documentos institucionais, cadastros e insumos de dev
     │   ├── banco-dados/          # Documentação OpenAPI/Swagger e schemas relacionais
     │   ├── forms/                # Respostas de formulários (.xlsx) de embarcadores e motoristas
-    │   ├── json-dados/           # Componentes e mocks estáticos de validação
+    │   ├── json-dados/           # Componentes e mocks estáticos de validação (.js / .json)
     │   ├── live/                 # Registros de reuniões e alinhamentos
-    │   ├── parceiros/            # Atas e acordos comerciais com parceiros
-    │   ├── pitch/                # Apresentações oficiais de Pitch Deck para investidores
-    │   ├── prototipo/            # Prompts e especificações de prototipagem (Lovable/Figma)
+    │   ├── parceiros/            # Atas (.docx) e acordos comerciais com parceiros
+    │   ├── pitch/                # Apresentações de Pitch Deck (.pdf) e roteiros (.docx)
+    │   ├── prototipo/            # Prompts e especificações de prototipagem (.docx / Lovable)
     │   ├── qa-infos/             # Screenshots, legendas de mapa e evidências de testes de UI
     │   ├── qa-refs/              # Tabelas de tamanhos de caminhões e referências visuais
     │   ├── qa-v5/                # Fluxos funcionais e matrizes da versão 5
