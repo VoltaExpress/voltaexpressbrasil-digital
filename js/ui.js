@@ -38,8 +38,31 @@ export class UIController {
         const ul = document.createElement("ul");
         ul.className = "space-y-1 pl-2 border-l border-slate-800/60";
 
-        // Dentro de createTreeNodes(nodes) no js/ui.js:
-        const gridFolders = ["qa-infos", "qa-refs", "supabase", "arts", "mkt-campanhas"];
+        // Dentro do método createTreeNodes(nodes) no js/ui.js:
+        const gridFolders = [
+            "qa-infos",
+            "qa-refs",
+            "supabase",
+            "arts",
+            "mkt-campanhas",
+            "anunciar-caminhao",
+            "buscar-carga",
+            "persona",
+            "marca-transportador",
+            "vantagem",
+            "anunciar-carga",
+            "buscar-caminhao",
+            "persona-embarcador",
+            "marca-embarcador",
+            "vantagem-embarcador",
+            "veb-assets",
+            "veb-public",
+            "veb-logo",
+            "veb-mkt-1",
+            "veb-mkt-2",
+            "veb-mkt-3",
+            "veb-painel"
+        ];
 
         nodes.forEach(node => {
             const li = document.createElement("li");

@@ -208,6 +208,7 @@ export const fileData = [
             {
                 name: "anunciar-caminhao",
                 type: "folder",
+                path: "assets/quero-carregar-transportador/anunciar-caminhao",
                 children: [
                     { name: "anunciar-caminhao-1.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-1.jpg", insight: "Interface e elementos visuais do fluxo de oferta de veículos." },
                     { name: "anunciar-caminhao-2-Hi-Way da Iveco.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/anunciar-caminhao/anunciar-caminhao-2-Hi-Way da Iveco.jpg", insight: "Modelo de caminhão Iveco Hi-Way para seleção no anúncio de frota." },
@@ -238,6 +239,7 @@ export const fileData = [
             {
                 name: "buscar-carga",
                 type: "folder",
+                path: "assets/quero-carregar-transportador/buscar-carga",
                 children: [
                     { name: "banner-caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/banner-caixas.png", insight: "Banner promocional da vitrine de cargas disponíveis." },
                     { name: "caixas.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/caixas.png", insight: "Ilustração de mercadorias para filtro rápido de categorias." },
@@ -254,61 +256,49 @@ export const fileData = [
                     { name: "estoque-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estoque-2.jpg", insight: "Fotografia de paletes e produtos armazenados." },
                     { name: "estrada.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/buscar-carga/estrada.jpg", insight: "Fotografia panorâmica de rodovia para compor a busca de rotas." }
                 ]
-            }, {
+            },
+            {
                 name: "persona",
                 type: "folder",
+                path: "assets/quero-carregar-transportador/persona",
                 children: [
-                    { name: "caminhoneiro-1.jpeg", ext: "img", extReal: "jpeg" },
-                    { name: "caminhoneiro-2.jpg", ext: "img", extReal: "jpg" },
-                    { name: "caminhoneiro-3.jpeg", ext: "img", extReal: "jpeg" },
-                    { name: "caminhoneiro-4.png", ext: "img", extReal: "png" },
-                    { name: "caminhoneiro-5.png", ext: "img", extReal: "png" },
-                    { name: "caminhoneiro-6.png", ext: "img", extReal: "png" },
-                    { name: "caminhoneiro-7.png", ext: "img", extReal: "png" },
-                    { name: "caminhoneiro-8.png", ext: "img", extReal: "png" },
-                    { name: "caminhoneiro-9.jpg", ext: "img", extReal: "jpg" },
-                    { name: "caminhoneiro-10.jpg", ext: "img", extReal: "jpg" }
-                ].map(file => ({
-                    name: file.name,
-                    type: "file",
-                    ext: file.ext,
-                    path: `assets/quero-carregar-transportador/persona/${file.name}`,
-                    insight: "Ativo visual da persona Motorista Autônomo para depoimentos e cards."
-                }))
-            }, {
-                name: "public",
+                    { name: "caminhoneiro-1.jpeg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-1.jpeg", insight: "Ativo visual da persona Motorista Autônomo nº 1 para depoimentos e cards." },
+                    { name: "caminhoneiro-2.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-2.jpg", insight: "Ativo visual da persona Motorista Autônomo nº 2 para depoimentos e cards." },
+                    { name: "caminhoneiro-3.jpeg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-3.jpeg", insight: "Ativo visual da persona Motorista Autônomo nº 3 para depoimentos e cards." },
+                    { name: "caminhoneiro-4.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-4.png", insight: "Ativo visual da persona Motorista Autônomo nº 4 para depoimentos e cards." },
+                    { name: "caminhoneiro-5.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-5.png", insight: "Ativo visual da persona Motorista Autônomo nº 5 para depoimentos e cards." },
+                    { name: "caminhoneiro-6.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-6.png", insight: "Ativo visual da persona Motorista Autônomo nº 6 para depoimentos e cards." },
+                    { name: "caminhoneiro-7.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-7.png", insight: "Ativo visual da persona Motorista Autônomo nº 7 para depoimentos e cards." },
+                    { name: "caminhoneiro-8.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-8.png", insight: "Ativo visual da persona Motorista Autônomo nº 8 para depoimentos e cards." },
+                    { name: "caminhoneiro-9.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-9.jpg", insight: "Ativo visual da persona Motorista Autônomo nº 9 para depoimentos e cards." },
+                    { name: "caminhoneiro-10.jpg", type: "file", ext: "img", path: "assets/quero-carregar-transportador/persona/caminhoneiro-10.jpg", insight: "Ativo visual da persona Motorista Autônomo nº 10 para depoimentos e cards." }
+                ]
+            },
+            {
+                name: "marca-transportador",
                 type: "folder",
+                path: "assets/quero-carregar-transportador/marca-transportador",
                 children: [
-                    { name: "android-chrome-192x192.png", ext: "img" },
-                    { name: "android-chrome-512x512.png", ext: "img" },
-                    { name: "apple-touch-icon.png", ext: "img" },
-                    { name: "favicon.ico", ext: "img" },
-                    { name: "favicon.png", ext: "img" },
-                    { name: "favicon-16x16.png", ext: "img" },
-                    { name: "favicon-32x32.png", ext: "img" }
-                ].map(file => ({
-                    name: file.name,
-                    type: "file",
-                    ext: file.ext,
-                    path: `assets/quero-carregar-transportador/public/${file.name}`,
-                    insight: file.name.includes("favicon")
-                        ? "Ícone oficial e favicons para navegador do módulo Quero Carregar."
-                        : "Ativo visual PWA e ícones de atalho móvel (Android/iOS)."
-                }))
+                    { name: "android-chrome-192x192.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/marca-transportador/android-chrome-192x192.png", insight: "Ativo visual PWA e ícones de atalho móvel (Android/iOS)." },
+                    { name: "android-chrome-512x512.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/marca-transportador/android-chrome-512x512.png", insight: "Ativo visual PWA e ícones de atalho móvel (Android/iOS)." },
+                    { name: "apple-touch-icon.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/marca-transportador/apple-touch-icon.png", insight: "Ativo visual PWA e ícones de atalho móvel (Android/iOS)." },
+                    { name: "favicon.ico", type: "file", ext: "img", path: "assets/quero-carregar-transportador/marca-transportador/favicon.ico", insight: "Ícone oficial e favicons para navegador do módulo Quero Carregar." },
+                    { name: "favicon.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/marca-transportador/favicon.png", insight: "Ícone oficial e favicons para navegador do módulo Quero Carregar." },
+                    { name: "favicon-16x16.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/marca-transportador/favicon-16x16.png", insight: "Ícone oficial e favicons para navegador do módulo Quero Carregar." },
+                    { name: "favicon-32x32.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/marca-transportador/favicon-32x32.png", insight: "Ícone oficial e favicons para navegador do módulo Quero Carregar." }
+                ]
             },
             {
                 name: "vantagem",
                 type: "folder",
+                path: "assets/quero-carregar-transportador/vantagem",
                 children: [
-                    ...Array.from({ length: 4 }, (_, i) => ({
-                        name: `vantagem-${i + 1}.png`,
-                        type: "file",
-                        ext: "img",
-                        path: `assets/quero-carregar-transportador/vantagem/vantagem-${i + 1}.png`,
-                        insight: `Ativo gráfico da ${i + 1}ª vantagem competitiva para a persona Caminhoneiro.`
-                    }))
+                    { name: "vantagem-1.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/vantagem/vantagem-1.png", insight: "Ativo gráfico da 1ª vantagem competitiva para a persona Caminhoneiro." },
+                    { name: "vantagem-2.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/vantagem/vantagem-2.png", insight: "Ativo gráfico da 2ª vantagem competitiva para a persona Caminhoneiro." },
+                    { name: "vantagem-3.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/vantagem/vantagem-3.png", insight: "Ativo gráfico da 3ª vantagem competitiva para a persona Caminhoneiro." },
+                    { name: "vantagem-4.png", type: "file", ext: "img", path: "assets/quero-carregar-transportador/vantagem/vantagem-4.png", insight: "Ativo gráfico da 4ª vantagem competitiva para a persona Caminhoneiro." }
                 ]
-            }
+            },
         ]
     },
     {
@@ -318,150 +308,120 @@ export const fileData = [
             {
                 name: "anunciar-carga",
                 type: "folder",
+                path: "assets/quero-transportar-embarcador/anunciar-carga",
                 children: [
-                    {
-                        name: "anuncio-Cargas.jpg",
-                        ext: "img",
-                        path: "assets/quero-transportar-embarcador/anunciar-carga/anuncio-Cargas.jpg",
-                        insight: "Interface da tela de cadastro e publicação de cargas pelo Embarcador."
-                    },
-                    ...[1, 2, 3, 4, 5, 6].map(i => ({
-                        name: `objetos-${i}.webp`,
-                        type: "file",
-                        ext: "img",
-                        path: `assets/quero-transportar-embarcador/anunciar-carga/objetos-${i}.webp`,
-                        insight: "Ícone e imagem de categoria de objeto/produto a ser embarcado."
-                    })),
-                    {
-                        name: "tenis-nike.jpg",
-                        type: "file",
-                        ext: "img",
-                        path: "assets/quero-transportar-embarcador/anunciar-carga/tenis-nike.jpg",
-                        insight: "Exemplo prático de mercadoria fracionada (Tênis Nike) cadastrada para frete."
-                    },
-                    {
-                        name: "tenis-nike-2.jpg",
-                        type: "file",
-                        ext: "img",
-                        path: "assets/quero-transportar-embarcador/anunciar-carga/tenis-nike-2.jpg",
-                        insight: "Visão complementar de mercadoria para validação da persona Embarcador."
-                    }
+                    { name: "anuncio-Cargas.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/anuncio-Cargas.jpg", insight: "Interface da tela de cadastro e publicação de cargas pelo Embarcador." },
+                    { name: "objetos-1.webp", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/objetos-1.webp", insight: "Ícone e imagem de categoria de objeto/produto nº 1 a ser embarcado." },
+                    { name: "objetos-2.webp", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/objetos-2.webp", insight: "Ícone e imagem de categoria de objeto/produto nº 2 a ser embarcado." },
+                    { name: "objetos-3.webp", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/objetos-3.webp", insight: "Ícone e imagem de categoria de objeto/produto nº 3 a ser embarcado." },
+                    { name: "objetos-4.webp", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/objetos-4.webp", insight: "Ícone e imagem de categoria de objeto/produto nº 4 a ser embarcado." },
+                    { name: "objetos-5.webp", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/objetos-5.webp", insight: "Ícone e imagem de categoria de objeto/produto nº 5 a ser embarcado." },
+                    { name: "objetos-6.webp", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/objetos-6.webp", insight: "Ícone e imagem de categoria de objeto/produto nº 6 a ser embarcado." },
+                    { name: "tenis-nike.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/tenis-nike.jpg", insight: "Exemplo prático de mercadoria fracionada (Tênis Nike) cadastrada para frete." },
+                    { name: "tenis-nike-2.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/anunciar-carga/tenis-nike-2.jpg", insight: "Visão complementar de mercadoria para validação da persona Embarcador." }
                 ]
-            }, {
-                name: "buscar-caminhao",
-                type: "folder",
-                children: [
-                    { name: "banner-caminhao.png", ext: "png" },
-                    { name: "caminhao.png", ext: "png" },
-                    { name: "caminhao-amarelo-8.jpg", ext: "jpg" },
-                    { name: "caminhao-azul-1.jpg", ext: "jpg" },
-                    { name: "caminhao-azul-6.png", ext: "png" },
-                    { name: "caminhao-azul-10.jpg", ext: "jpg" },
-                    { name: "caminhao-branco-12.jpg", ext: "jpg" },
-                    { name: "caminhao-container-11.jpg", ext: "jpg" },
-                    { name: "caminhao-frota-4.jpg", ext: "jpg" },
-                    { name: "caminhao-frota-frigorifico-2.jpg", ext: "jpg" },
-                    { name: "caminhao-laranja-3.jpg", ext: "jpg" },
-                    { name: "caminhao-no-centro-de-distribuicao (2).jpg", ext: "jpg" },
-                    { name: "caminhao-no-centro-de-distribuicao (3).jpg", ext: "jpg" },
-                    { name: "caminhao-no-centro-de-distribuicao.jpg", ext: "jpg" },
-                    { name: "caminhao-no-deposito.jpg", ext: "jpg" },
-                    { name: "caminhao-preto-5.jpg", ext: "jpg" },
-                    { name: "caminhao-verde-7.png", ext: "png" },
-                    { name: "caminhao-verde-9.jpg", ext: "jpg" }
-                ].map(file => ({
-                    name: file.name,
-                    type: "file",
-                    ext: "img",
-                    path: `assets/quero-transportar-embarcador/buscar-caminhao/${file.name}`,
-                    insight: file.name.startsWith("banner")
-                        ? "Banner promocional da busca de veículos verificados."
-                        : "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador."
-                }))
-            }, {
-                name: "persona",
-                type: "folder",
-                children: [
-                    { name: "ana-lucia.png", ext: "png" },
-                    { name: "marcos-viana.png", ext: "png" },
-                    { name: "maria-braga.png", ext: "png" },
-                    { name: "roberto-mattos.jpg", ext: "jpg" },
-                    { name: "roberto-mattos.png", ext: "png" },
-                    { name: "sofia-guedes.png", ext: "png" }
-                ].map(file => ({
-                    name: file.name,
-                    type: "file",
-                    ext: "img",
-                    path: `assets/quero-transportar-embarcador/persona/${file.name}`,
-                    insight: `Avatar e perfil da persona Embarcador (${file.name.split('.')[0].replace('-', ' ')}).`
-                }))
-            }, {
-                name: "public",
-                type: "folder",
-                children: [
-                    { name: "android-chrome-192x192.png", ext: "img" },
-                    { name: "android-chrome-512x512.png", ext: "img" },
-                    { name: "apple-touch-icon.png", ext: "img" },
-                    { name: "favicon.ico", ext: "img" },
-                    { name: "favicon.png", ext: "img" },
-                    { name: "favicon-16x16.png", ext: "img" },
-                    { name: "favicon-32x32.png", ext: "img" }
-                ].map(file => ({
-                    name: file.name,
-                    type: "file",
-                    ext: file.ext,
-                    path: `assets/quero-transportar-embarcador/public/${file.name}`,
-                    insight: file.name.includes("favicon")
-                        ? "Ícone oficial e favicons de navegador do módulo Quero Transportar."
-                        : "Ativo visual PWA e ícones de atalho móvel (Android/iOS)."
-                }))
             },
             {
-                name: "vantagem",
+                name: "buscar-caminhao",
                 type: "folder",
-                children: [1, 2, 3, 4].map(i => ({
-                    name: `vantagem-${i}.PNG`,
-                    type: "file",
-                    ext: "img",
-                    path: `assets/quero-transportar-embarcador/vantagem/vantagem-${i}.PNG`,
-                    insight: `Ativo gráfico da ${i}ª vantagem competitiva para o Embarcador.`
-                }))
+                path: "assets/quero-transportar-embarcador/buscar-caminhao",
+                children: [
+                    { name: "banner-caminhao.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/banner-caminhao.png", insight: "Banner promocional da busca de veículos verificados." },
+                    { name: "caminhao.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao.png", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-amarelo-8.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-amarelo-8.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-azul-1.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-azul-1.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-azul-6.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-azul-6.png", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-azul-10.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-azul-10.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-branco-12.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-branco-12.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-container-11.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-container-11.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-frota-4.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-frota-4.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-frota-frigorifico-2.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-frota-frigorifico-2.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-laranja-3.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-laranja-3.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-no-centro-de-distribuicao (2).jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-no-centro-de-distribuicao (2).jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-no-centro-de-distribuicao (3).jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-no-centro-de-distribuicao (3).jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-no-centro-de-distribuicao.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-no-centro-de-distribuicao.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-no-deposito.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-no-deposito.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-preto-5.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-preto-5.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-verde-7.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-verde-7.png", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." },
+                    { name: "caminhao-verde-9.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/buscar-caminhao/caminhao-verde-9.jpg", insight: "Ativo visual de veículo/frota disponível para busca e contratação do Embarcador." }
+                ]
+            },
+            {
+                name: "persona-embarcador",
+                type: "folder",
+                path: "assets/quero-transportar-embarcador/persona-embarcador",
+                children: [
+                    { name: "ana-lucia.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/persona-embarcador/ana-lucia.png", insight: "Avatar e perfil da persona Embarcador (Ana Lúcia)." },
+                    { name: "marcos-viana.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/persona-embarcador/marcos-viana.png", insight: "Avatar e perfil da persona Embarcador (Marcos Viana)." },
+                    { name: "maria-braga.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/persona-embarcador/maria-braga.png", insight: "Avatar e perfil da persona Embarcador (Maria Braga)." },
+                    { name: "roberto-mattos.jpg", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/persona-embarcador/roberto-mattos.jpg", insight: "Avatar e perfil da persona Embarcador (Roberto Mattos JPG)." },
+                    { name: "roberto-mattos.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/persona-embarcador/roberto-mattos.png", insight: "Avatar e perfil da persona Embarcador (Roberto Mattos PNG)." },
+                    { name: "sofia-guedes.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/persona-embarcador/sofia-guedes.png", insight: "Avatar e perfil da persona Embarcador (Sofia Guedes)." }
+                ]
+            },
+            {
+                name: "marca-embarcador",
+                type: "folder",
+                path: "assets/quero-transportar-embarcador/marca-embarcador",
+                children: [
+                    { name: "android-chrome-192x192.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/marca-embarcador/android-chrome-192x192.png", insight: "Ativo visual PWA e ícones de atalho móvel (Android/iOS)." },
+                    { name: "android-chrome-512x512.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/marca-embarcador/android-chrome-512x512.png", insight: "Ativo visual PWA e ícones de atalho móvel (Android/iOS)." },
+                    { name: "apple-touch-icon.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/marca-embarcador/apple-touch-icon.png", insight: "Ativo visual PWA e ícones de atalho móvel (Android/iOS)." },
+                    { name: "favicon.ico", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/marca-embarcador/favicon.ico", insight: "Ícone oficial e favicons de navegador do módulo Quero Transportar." },
+                    { name: "favicon.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/marca-embarcador/favicon.png", insight: "Ícone oficial e favicons de navegador do módulo Quero Transportar." },
+                    { name: "favicon-16x16.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/marca-embarcador/favicon-16x16.png", insight: "Ícone oficial e favicons de navegador do módulo Quero Transportar." },
+                    { name: "favicon-32x32.png", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/marca-embarcador/favicon-32x32.png", insight: "Ícone oficial e favicons de navegador do módulo Quero Transportar." }
+                ]
+            }, {
+                name: "vantagem-embarcador",
+                type: "folder",
+                path: "assets/quero-transportar-embarcador/vantagem-embarcador",
+                children: [
+                    { name: "vantagem-1.PNG", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/vantagem-embarcador/vantagem-1.PNG", insight: "Ativo gráfico da 1ª vantagem competitiva para o Embarcador." },
+                    { name: "vantagem-2.PNG", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/vantagem-embarcador/vantagem-2.PNG", insight: "Ativo gráfico da 2ª vantagem competitiva para o Embarcador." },
+                    { name: "vantagem-3.PNG", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/vantagem-embarcador/vantagem-3.PNG", insight: "Ativo gráfico da 3ª vantagem competitiva para o Embarcador." },
+                    { name: "vantagem-4.PNG", type: "file", ext: "img", path: "assets/quero-transportar-embarcador/vantagem-embarcador/vantagem-4.PNG", insight: "Ativo gráfico da 4ª vantagem competitiva para o Embarcador." }
+                ]
             }
         ],
     },
     {
         name: "voltaexpressbrasil",
         type: "folder",
+        path: "assets/voltaexpressbrasil",
         children: [
             {
-                name: "assets",
+                name: "veb-assets",
                 type: "folder",
+                path: "assets/voltaexpressbrasil/veb-assets",
                 children: [
-                    { name: "banner-caixas-caminhao.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/assets/banner-caixas-caminhao.png", insight: "Banner promocional da marca Volta Express Brasil." },
-                    { name: "favicon.ico", type: "file", ext: "img", path: "assets/voltaexpressbrasil/assets/favicon.ico", insight: "Favicon ICO principal." },
-                    { name: "favicon.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/assets/favicon.png", insight: "Favicon PNG principal." },
-                    { name: "favicon-PNG-removebg.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/assets/favicon-PNG-removebg.png", insight: "Favicon transparente sem fundo." },
-                    { name: "logo-volta-express.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/assets/logo-volta-express.png", insight: "Logotipo oficial da Volta Express." },
-                    { name: "logo-volta-express-caminhao.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/assets/logo-volta-express-caminhao.png", insight: "Variação do logo focado em transportador." },
-                    { name: "logo-volta-express-cargas.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/assets/logo-volta-express-cargas.png", insight: "Variação do logo focado em cargas." }
+                    { name: "banner-caixas-caminhao.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-assets/banner-caixas-caminhao.png", insight: "Banner promocional da marca Volta Express Brasil." },
+                    { name: "favicon.ico", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-assets/favicon.ico", insight: "Favicon ICO principal." },
+                    { name: "favicon.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-assets/favicon.png", insight: "Favicon PNG principal." },
+                    { name: "favicon-PNG-removebg.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-assets/favicon-PNG-removebg.png", insight: "Favicon transparente sem fundo." },
+                    { name: "logo-volta-express.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-assets/logo-volta-express.png", insight: "Logotipo oficial da Volta Express." },
+                    { name: "logo-volta-express-caminhao.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-assets/logo-volta-express-caminhao.png", insight: "Variação do logo focado em transportador." },
+                    { name: "logo-volta-express-cargas.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-assets/logo-volta-express-cargas.png", insight: "Variação do logo focado em cargas." }
                 ]
             },
             {
-                name: "public",
+                name: "veb-public",
                 type: "folder",
+                path: "assets/voltaexpressbrasil/veb-public",
                 children: [
-                    { name: "android-chrome-192x192.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/public/android-chrome-192x192.png", insight: "Ícone PWA Android 192x192." },
-                    { name: "android-chrome-512x512.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/public/android-chrome-512x512.png", insight: "Ícone PWA Android 512x512." },
-                    { name: "apple-touch-icon.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/public/apple-touch-icon.png", insight: "Ícone de atalho Apple iOS." },
-                    { name: "favicon.ico", type: "file", ext: "img", path: "assets/voltaexpressbrasil/public/favicon.ico", insight: "Favicon clássico do navegador." },
-                    { name: "favicon.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/public/favicon.png", insight: "Favicon em formato PNG." },
-                    { name: "favicon-16x16.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/public/favicon-16x16.png", insight: "Favicon em baixa resolução 16x16." },
-                    { name: "favicon-32x32.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/public/favicon-32x32.png", insight: "Favicon em média resolução 32x32." }
+                    { name: "android-chrome-192x192.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-public/android-chrome-192x192.png", insight: "Ícone PWA Android 192x192." },
+                    { name: "android-chrome-512x512.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-public/android-chrome-512x512.png", insight: "Ícone PWA Android 512x512." },
+                    { name: "apple-touch-icon.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-public/apple-touch-icon.png", insight: "Ícone de atalho Apple iOS." },
+                    { name: "favicon.ico", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-public/favicon.ico", insight: "Favicon clássico do navegador." },
+                    { name: "favicon.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-public/favicon.png", insight: "Favicon em formato PNG." },
+                    { name: "favicon-16x16.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-public/favicon-16x16.png", insight: "Favicon em baixa resolução 16x16." },
+                    { name: "favicon-32x32.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-public/favicon-32x32.png", insight: "Favicon em média resolução 32x32." }
                 ]
             },
             {
                 name: "veb-logo",
                 type: "folder",
+                path: "assets/voltaexpressbrasil/veb-logo",
                 children: [
                     { name: "banner-caixas-caminhao-logo.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-logo/banner-caixas-caminhao-logo.png", insight: "Banner da marca com aplicação do logotipo." },
                     { name: "caixas.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-logo/caixas.png", insight: "Ativo gráfico isolado de caixas de carga." },
@@ -477,6 +437,7 @@ export const fileData = [
             {
                 name: "veb-mkt-1",
                 type: "folder",
+                path: "assets/voltaexpressbrasil/veb-mkt-1",
                 children: [
                     { name: "1. Transportar a um clique (1).png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-mkt-1/1. Transportar a um clique (1).png", insight: "Ativo visual para campanha Transportar a um Clique." },
                     { name: "1. Transportar a um clique.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-mkt-1/1. Transportar a um clique.png", insight: "Banner promocional da campanha Transportar a um Clique." },
@@ -500,6 +461,7 @@ export const fileData = [
             {
                 name: "veb-mkt-2",
                 type: "folder",
+                path: "assets/voltaexpressbrasil/veb-mkt-2",
                 children: [
                     { name: "carreta-2.jpeg", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-mkt-2/carreta-2.jpeg", insight: "Imagem de divulgação de veículo do tipo carreta." },
                     { name: "volta-express-brasil-dg.jpeg", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-mkt-2/volta-express-brasil-dg.jpeg", insight: "Material promocional de design/mídia." },
@@ -511,6 +473,7 @@ export const fileData = [
             {
                 name: "veb-mkt-3",
                 type: "folder",
+                path: "assets/voltaexpressbrasil/veb-mkt-3",
                 children: [
                     { name: "caminhao-na-mecanica.jpg", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-mkt-3/caminhao-na-mecanica.jpg", insight: "Foto temática de caminhão em oficina mecânica." },
                     { name: "caminhao-no-tunel.jpg", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-mkt-3/caminhao-no-tunel.jpg", insight: "Foto artística de caminhão em túnel." },
@@ -536,6 +499,7 @@ export const fileData = [
             {
                 name: "veb-painel",
                 type: "folder",
+                path: "assets/voltaexpressbrasil/veb-painel",
                 children: [
                     { name: "carreta-1.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-painel/carreta-1.png", insight: "Ativo gráfico de veículo para o painel principal." },
                     { name: "carreta-2.png", type: "file", ext: "img", path: "assets/voltaexpressbrasil/veb-painel/carreta-2.png", insight: "Segunda opção gráfica de veículo para o painel." },
