@@ -161,6 +161,34 @@ Os desenvolvedores podem referenciar qualquer imagem, logo ou documento diretame
 
 ---
 
+## 🌐 Seções Estratégicas & Atalhos de Ecossistema
+
+O Dashboard conta com seções dinâmicas dedicadas à governança de produto, benchmarking, inteligência de mercado e links operacionais de infraestrutura. Cada seção renderiza cards interativos e responsivos no painel central:
+
+### 1. 📌 Posicionamento Digital (`posicionamento-digital`)
+Centraliza a presença oficial da **Volta Express Brasil** nas redes e canais de comunicação. Cada card exibe a identidade da plataforma, descrição e acesso direto via link seguro:
+* ✉️ **Canais Corporativos:** Gmail Oficial (`voltaexpressbrasil@gmail.com`) e Outlook da operação.
+* 💻 **Engenharia:** Repositórios Oficiais no GitHub (`github.com/VoltaExpress`).
+* 📣 **Mídias Digitais:** Instagram (`@voltaexpressbrasil`), YouTube (`@VoltaExpress`), TikTok e Páginas de Interação e Personas no Facebook.
+
+### 2. 📋 Pesquisa de Cliente via Form (`pesquisa-cliente-forms`)
+Catálogo com **23 formulários e bases de dados** no Microsoft Forms e OneDrive, categorizados visualmente por badges coloridas:
+* 🟢 **Ambiente de Produção (Público):** Formulários ativos de captação de rotas, ofertas de carga, cadastros e entrevistas qualitativas com caminhoneiros.
+* 🟡 **Painel de Edição/Design:** Links de gerenciamento e rascunhos de questionários.
+* 📊 **Bases de Respostas (.xlsx):** Planilhas consolidadas no OneDrive para análise contínua do time de Produto e Growth.
+
+### 3. 💡 Benchmarking de Produto (`benchmarking-produto`)
+Análise comparativa e arquitetura de negócios do ecossistema SaaS de logística:
+* 📑 **Especificação Técnica de Requisitos:** Documento formatado em layout executivo cobrindo Objetivos do Produto, Modelo de Monetização por Assinatura, Perfis de Acesso (Embarcador, Motorista e Admin), Fluxos de Cadastro com OTP/Validação e Regras de Negócio de Anúncios. Inclui atalho direto para o [Google Docs Mestre Original](https://docs.google.com/document/d/1Ed-TkNVTAiny1Xiv3xlV9W00PTxt2zCB0k7mBfadyoc/edit?tab=t.0).
+* 🎥 **Análise do Ecossistema em Vídeo:** Player embutido nativamente no Hub para assistir ao vídeo de referência do ecossistema sem sair da aplicação.
+
+### 4. ⚙️ Infraestrutura & Sistemas (`sistemas`)
+Subpastas organizadas para gestão dos provedores de hospedagem, zonas de DNS e construtores:
+* ⚡ **Netlify (`sistemas/netlify`):** Atalhos para o painel de *Deploys/Builds*, Gerenciamento de Registros de DNS (`voltaexpress.com.br`), Certificados SSL e acervo de documentações técnicas oficiais (*netlify.toml*, papéis e permissões).
+* 🌐 **GoDaddy (`sistemas/godaddy`):** Links para o Construtor de Sites e especificações dos servidores de Hospedagem.
+
+---
+
 ## 🛡️ Contribuição e Licença
 
 Este repositório é gerenciado internamente pela equipe de Produto e Engenharia da **Volta Express Brasil**. Alterações na estrutura de dados, diretórios de marca ou inclusão de novos materiais devem passar por aprovação da liderança técnica (PM / CTO).

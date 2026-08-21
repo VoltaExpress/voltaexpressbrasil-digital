@@ -65,7 +65,9 @@ export class UIController {
             "veb-painel",
             "posicionamento-digital",
             "pesquisa-cliente-forms",
-            "benchmarking-produto"
+            "benchmarking-produto",
+            "netlify",
+            "godaddy"
         ];
 
         nodes.forEach(node => {

@@ -553,26 +553,71 @@ export const fileData = [
         ]
     },
     {
-  name: "benchmarking-produto",
-  type: "folder",
-  path: "benchmarking-produto",
-  children: [
-    {
-      name: "Especificação do Modelo de Negócios - Plataforma de Frete SaaS",
-      type: "file",
-      ext: "doc",
-      category: "Documento de Produto",
-      url: "https://docs.google.com/document/d/1Ed-TkNVTAiny1Xiv3xlV9W00PTxt2zCB0k7mBfadyoc/edit?tab=t.0",
-      insight: "Mapeamento detalhado de regras de negócio, modelo de assinatura, perfis (Embarcador, Caminhoneiro e Admin) e fluxo de fretes."
+        name: "benchmarking-produto",
+        type: "folder",
+        path: "benchmarking-produto",
+        children: [
+            {
+                name: "Especificação do Modelo de Negócios - Plataforma de Frete SaaS",
+                type: "file",
+                ext: "doc",
+                category: "Documento de Produto",
+                url: "https://docs.google.com/document/d/1Ed-TkNVTAiny1Xiv3xlV9W00PTxt2zCB0k7mBfadyoc/edit?tab=t.0",
+                insight: "Mapeamento detalhado de regras de negócio, modelo de assinatura, perfis (Embarcador, Caminhoneiro e Admin) e fluxo de fretes."
+            },
+            {
+                name: "Análise de Referência do Ecossistema (Vídeo)",
+                type: "file",
+                ext: "video",
+                url: "https://www.youtube.com/embed/GiCqtnedveg",
+                category: "Benchmarking Vídeo",
+                insight: "Vídeo de referência sobre arquitetura de produto e solução de logística."
+            }
+        ]
     },
     {
-      name: "Análise de Referência do Ecossistema (Vídeo)",
-      type: "file",
-      ext: "video",
-      url: "https://www.youtube.com/embed/GiCqtnedveg",
-      category: "Benchmarking Vídeo",
-      insight: "Vídeo de referência sobre arquitetura de produto e solução de logística."
+        name: "sistemas",
+        type: "folder",
+        path: "sistemas",
+        children: [
+            {
+                name: "netlify",
+                type: "folder",
+                path: "sistemas/netlify",
+                children: [
+                    { name: "Deploys | voltaexpressveb | Netlify", type: "link", category: "App / Painel", url: "https://app.netlify.com/projects/voltaexpressveb/deploys", insight: "Painel de acompanhamento de deploys e builds do projeto no Netlify." },
+                    { name: "Get started with domains | Netlify Docs", type: "link", category: "Documentação", url: "https://docs.netlify.com/manage/domains/get-started-with-domains/", insight: "Guia oficial de configuração e gerenciamento de domínios." },
+                    { name: "Netlify Docs - hospedar com domínio oficial", type: "link", category: "Documentação", url: "https://docs.netlify.com/manage/domains/get-started-with-domains/", insight: "Documentação de apoio para vincular o domínio customizado do projeto." },
+                    { name: "HTTPS (SSL) | Netlify Docs", type: "link", category: "Documentação", url: "https://docs.netlify.com/manage/domains/secure-domains-with-https/", insight: "Configurações e certificados de segurança HTTPS/SSL para os domínios." },
+                    { name: "Configure an automatic subdomain for deploys", type: "link", category: "Documentação", url: "https://docs.netlify.com/manage/domains/configure-domains/configure-automatic-subdomains/", insight: "Guia para configuração de subdomínios automáticos de deploy/preview." },
+                    { name: "DNS | voltaexpress | Netlify", type: "link", category: "App / Painel", url: "https://app.netlify.com/teams/voltaexpress/dns/voltaexpress.com.br", insight: "Painel de gestão de zonas e registros de DNS da Volta Express." },
+                    { name: "Billing overview | Netlify Docs", type: "link", category: "Documentação", url: "https://docs.netlify.com/manage/accounts-and-billing/billing/overview/", insight: "Visão geral sobre faturamento, planos e limites de uso da conta." },
+                    { name: "Roles and permissions | Netlify Docs", type: "link", category: "Documentação", url: "https://docs.netlify.com/manage/accounts-and-billing/team-members-and-roles/", insight: "Documentação de controle de acessos e permissões do time no Netlify." },
+                    { name: "Create deploys | Netlify Docs", type: "link", category: "Documentação", url: "https://docs.netlify.com/deploy/create-deploys/", insight: "Guia prático sobre formas de criação e gatilhos de deploy." },
+                    { name: "Build configuration overview | Netlify Docs", type: "link", category: "Documentação", url: "https://docs.netlify.com/build/configure-builds/overview/", insight: "Especificações para arquivos netlify.toml e configurações de build." }
+                ]
+            },
+            {
+                name: "godaddy",
+                type: "folder",
+                path: "sistemas/godaddy",
+                children: [
+                    {
+                        name: "Criador de Sites | GoDaddy",
+                        type: "link",
+                        category: "Ferramenta / Builder",
+                        url: "https://www.godaddy.com/pt-br/sites/criador-de-sites",
+                        insight: "Plataforma e construtor de páginas/sites da GoDaddy."
+                    },
+                    {
+                        name: "Serviço de Hospedagem | GoDaddy",
+                        type: "link",
+                        category: "Hospedagem / Servidor",
+                        url: "https://www.godaddy.com/pt-br/servico-hospedagem?msockid=0a175630ed6164880d784189ece36523",
+                        insight: "Painel e especificações de serviços de hospedagem GoDaddy."
+                    }
+                ]
+            }
+        ]
     }
-  ]
-}
 ];
