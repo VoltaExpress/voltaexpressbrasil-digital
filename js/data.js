@@ -507,5 +507,20 @@ export const fileData = [
                 ]
             }
         ]
+    },
+    {
+        name: "posicionamento-digital",
+        type: "folder",
+        path: "posicionamento-digital",
+        children: [
+            { name: "Gmail Oficial", type: "file", ext: "social", icon: "fa-envelope", color: "text-red-500", url: "https://mail.google.com/", insight: "E-mail oficial da operação: voltaexpressbrasil@gmail.com" },
+            { name: "Outlook - VEB", type: "file", ext: "social", icon: "fa-paper-plane", color: "text-blue-500", url: "https://outlook.live.com/", insight: "Caixa de entrada corporativa da Volta Express Brasil no Outlook." },
+            { name: "GitHub - Repositórios", type: "file", ext: "social", icon: "fa-github", color: "text-slate-900", url: "https://github.com/VoltaExpress?tab=repositories", insight: "Organização no GitHub com os repositórios oficiais e ecossistema digital." },
+            { name: "Instagram Oficial", type: "file", ext: "social", icon: "fa-instagram", color: "text-pink-600", url: "https://www.instagram.com/voltaexpressbrasil/", insight: "Perfil oficial no Instagram para conteúdos de branding e engajamento da comunidade." },
+            { name: "YouTube Oficial", type: "file", ext: "social", icon: "fa-youtube", color: "text-red-600", url: "https://www.youtube.com/@VoltaExpress", insight: "Canal no YouTube com tutoriais, demonstrações da plataforma e conteúdos em vídeo." },
+            { name: "Facebook - Página VEB", type: "file", ext: "social", icon: "fa-facebook", color: "text-blue-600", url: "https://www.facebook.com/profile.php?id=61590175261643", insight: "Página oficial institucional no Facebook." },
+            { name: "Facebook - Persona", type: "file", ext: "social", icon: "fa-facebook-f", color: "text-blue-700", url: "https://www.facebook.com/profile.php?id=61590155552634", insight: "Perfil focado em interação direta com grupos de caminhoneiros e embarcadores." },
+            { name: "TikTok", type: "file", ext: "social", icon: "fa-tiktok", color: "text-slate-900", url: "https://www.tiktok.com/@voltaexpressbrasil", insight: "Conta oficial para vídeos curtos e conteúdos dinâmicos de bastidores." }
+        ]
     }
 ];

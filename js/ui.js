@@ -61,7 +61,8 @@ export class UIController {
             "veb-mkt-1",
             "veb-mkt-2",
             "veb-mkt-3",
-            "veb-painel"
+            "veb-painel",
+            "posicionamento-digital"
         ];
 
         nodes.forEach(node => {

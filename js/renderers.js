@@ -137,6 +137,12 @@ export const Renderers = {
    * Renderiza a Grid de Imagens quando a pasta qa-infos for clicada
    */
   renderFolderGrid(folder, container) {
+
+    if (folder.name === "posicionamento-digital") {
+      this.renderSocialGrid(folder, container);
+      return;
+    }
+
     const targetArea = container || document.getElementById("viewerContainer") || document.getElementById("main-content");
     if (!targetArea) return;
 
@@ -250,6 +256,49 @@ export const Renderers = {
       modal.remove();
       document.removeEventListener('keydown', handleEscKey);
     }
+  },
+
+/**
+   * Renderiza a Grid de Canais e Redes Sociais da pasta posicionamento-digital
+   */
+  renderSocialGrid(folder, container) {
+    const targetArea = container || document.getElementById("viewerContainer") || document.getElementById("main-content");
+    if (!targetArea) return;
+
+    const items = folder.children || [];
+
+    targetArea.innerHTML = `
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-2">
+        ${items.map(item => {
+          // Trata ícones da marca (FontAwesome Brands vs Solid)
+          const isBrandIcon = !item.icon.includes('envelope') && !item.icon.includes('paper-plane');
+          const iconPrefix = isBrandIcon ? 'fa-brands' : 'fa-solid';
+
+          return `
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md hover:border-blue-300 transition flex flex-col justify-between group">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="w-10 h-10 rounded-lg bg-slate-100/80 flex items-center justify-center text-xl ${item.color || 'text-slate-700'} group-hover:scale-110 transition duration-200">
+                    <i class="${iconPrefix} ${item.icon || 'fa-globe'}"></i>
+                  </div>
+                  <span class="text-[10px] font-mono text-blue-600 bg-blue-50 px-2 py-0.5 rounded border border-blue-100 font-semibold">
+                    Canal Oficial
+                  </span>
+                </div>
+                <h4 class="text-sm font-bold text-slate-800 mb-1.5">${item.name}</h4>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4 line-clamp-3">${item.insight || ''}</p>
+              </div>
+
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" 
+                 class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white text-xs font-medium py-2.5 px-3 rounded-lg transition duration-150 shadow-sm">
+                <span>Acessar Canal</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
   }
 };
 
