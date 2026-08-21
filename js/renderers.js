@@ -28,19 +28,69 @@ export const Renderers = {
   },
 
   renderCode(file, container) {
+    // 1. Estado de Carregamento (Loading)
+    container.innerHTML = `
+      <div class="p-8 text-center text-slate-500 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-spinner fa-spin text-blue-600 text-lg"></i>
+        <span>Lendo código fonte...</span>
+      </div>
+    `;
+
+    // 2. Mapeamento da linguagem para o Prism.js
+    const langMap = {
+      js: "javascript",
+      css: "css",
+      json: "json",
+      html: "html",
+      ts: "typescript"
+    };
+    const language = langMap[file.ext] || "javascript";
+
+    // 3. Busca o texto do arquivo .js / .json / .css
     fetch(file.path)
-      .then(res => res.text())
-      .then(code => {
-        const lang = file.ext === "js" ? "javascript" : file.ext;
-        container.innerHTML = `<pre><code class="language-${lang}">${escapeHtml(code)}</code></pre>`;
-        if (window.Prism) window.Prism.highlightAll();
+      .then(response => {
+        if (!response.ok) throw new Error("Não foi possível carregar o arquivo de código.");
+        return response.text();
       })
-      .catch(() => {
+      .then(codeText => {
+        // Sanitiza o código para evitar que tags HTML no código quebrem o DOM
+        const safeCode = codeText
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+
+        // 4. Renderiza a estrutura visual de editor de código
         container.innerHTML = `
-          <div class="p-6 bg-white rounded-xl border border-slate-200 text-xs font-mono text-slate-600">
-            <p class="font-bold text-slate-800 mb-1">Visualização de Código</p>
-            <p>Caminho: ${file.path}</p>
-            <p class="mt-2 text-slate-400">O arquivo será renderizado assim que estiver sincronizado no repositório.</p>
+          <div class="max-w-5xl mx-auto my-4 bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden flex flex-col">
+            <!-- Barra Superior / Header do Arquivo -->
+            <div class="bg-slate-950 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                <span class="ml-2 text-xs font-mono text-slate-400">${file.name}</span>
+              </div>
+              <span class="text-[10px] font-mono text-blue-400 uppercase bg-blue-950/60 px-2 py-0.5 rounded border border-blue-800/40">${language}</span>
+            </div>
+
+            <!-- Bloco do Código -->
+            <div class="p-4 overflow-x-auto text-xs font-mono leading-relaxed">
+              <pre class="!bg-transparent !m-0 !p-0"><code class="language-${language}">${safeCode}</code></pre>
+            </div>
+          </div>
+        `;
+
+        // 5. Aciona o destaque de sintaxe do Prism.js se disponível
+        if (window.Prism) {
+          window.Prism.highlightAllUnder(container);
+        }
+      })
+      .catch(error => {
+        container.innerHTML = `
+          <div class="p-6 bg-red-50 text-red-700 rounded-lg border border-red-200 text-center max-w-lg mx-auto my-8">
+            <i class="fa-solid fa-triangle-exclamation text-2xl mb-2 text-red-500"></i>
+            <p class="font-semibold text-sm">Erro ao carregar o arquivo de código.</p>
+            <p class="text-xs text-red-500 mt-1">${error.message}</p>
           </div>
         `;
       });

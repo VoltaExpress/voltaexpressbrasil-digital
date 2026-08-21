@@ -190,12 +190,65 @@ export class UIController {
         container.innerHTML = "";
 
         // Renderizar conteúdo pelo formato
-        if (file.ext === "pdf") Renderers.renderPdf(file, container);
+        if (["pdf", "doc"].includes(file.ext)) this.renderDocumentFile(file); // <--- ATUALIZADO
         else if (file.ext === "img") Renderers.renderImage(file, container);
         else if (file.ext === "video") Renderers.renderVideo(file, container);
         else if (["js", "css", "json"].includes(file.ext)) Renderers.renderCode(file, container);
         else if (file.ext === "xlsx") Renderers.renderExcel(file, container);
         else Renderers.renderDefault(file, container);
+    }
+
+    renderDocumentFile(file) {
+        const viewer = document.getElementById("viewerContainer");
+        if (!viewer) return;
+
+        // Renderização de PDF via iframe
+        if (file.ext === "pdf") {
+            viewer.innerHTML = `
+                <div class="w-full h-full bg-slate-100 rounded-lg overflow-hidden border border-slate-200 shadow-sm flex flex-col min-h-[600px]">
+                    <iframe src="${file.path}" class="w-full h-full min-h-[600px]" frameborder="0"></iframe>
+                </div>
+            `;
+            return;
+        }
+
+        // Renderização de DOC / DOCX via Mammoth.js
+        if (file.ext === "doc" || file.ext === "docx") {
+            viewer.innerHTML = `
+                <div class="p-8 text-center text-slate-500 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-spinner fa-spin text-blue-600 text-lg"></i>
+                    <span>Carregando e formatando documento...</span>
+                </div>
+            `;
+
+            fetch(file.path)
+                .then(response => {
+                    if (!response.ok) throw new Error("Não foi possível carregar o arquivo.");
+                    return response.arrayBuffer();
+                })
+                .then(arrayBuffer => {
+                    if (!window.mammoth) {
+                        throw new Error("Biblioteca de conversão (Mammoth.js) indisponível.");
+                    }
+                    return window.mammoth.convertToHtml({ arrayBuffer: arrayBuffer });
+                })
+                .then(result => {
+                    viewer.innerHTML = `
+                        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-md border border-slate-200 my-4 text-slate-800 leading-relaxed font-sans prose prose-slate">
+                            ${result.value}
+                        </div>
+                    `;
+                })
+                .catch(error => {
+                    viewer.innerHTML = `
+                        <div class="p-6 bg-red-50 text-red-700 rounded-lg border border-red-200 text-center max-w-lg mx-auto my-8">
+                            <i class="fa-solid fa-triangle-exclamation text-2xl mb-2 text-red-500"></i>
+                            <p class="font-semibold text-sm">Erro ao carregar o documento.</p>
+                            <p class="text-xs text-red-500 mt-1">${error.message}</p>
+                        </div>
+                    `;
+                });
+        }
     }
 
     setupSearch() {
@@ -259,3 +312,4 @@ export class UIController {
         if (overlay) overlay.addEventListener('click', closeSidebar);
     }
 }
+
