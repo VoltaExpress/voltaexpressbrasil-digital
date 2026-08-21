@@ -43,69 +43,66 @@ O projeto é dividido em **dois pilares fundamentais**: a **Camada de Aplicaçã
 
 ```text
 voltaexpressbrasil-digital/
-├── index.html                    # Ponto de entrada HTML do Dashboard Hub
-├── style.css                     # Estilos visuais, variáveis de tema e overrides
-├── readme.md                     # Documentação mestre de governança
+├── index.html                            # Ponto de entrada HTML do Dashboard Hub
+├── style.css                             # Estilos visuais, variáveis de tema e overrides
+├── readme.md                             # Documentação mestre de governança
 │
-├── js/                           # 🧠 CAMADA DE APLICAÇÃO (ES6 Modules)
-│   ├── config.js                 # Constantes globais, caminhos base e ícones por extensão
-│   ├── data.js                   # [DATA] Matriz de dados (Ativos físicos + Atalhos de mídias/sistemas)
-│   ├── renderers.js              # [VIEWER] Motores de renderização (PDF, Excel, Video, Code, Img, DOCX, Cards)
-│   ├── ui.js                     # [CONTROLLER] Lógica da árvore interativa, busca e gerenciamento da UI
-│   └── main.js                   # [BOOTSTRAP] Ponto de entrada de inicialização
+├── js/                                   # 🧠 CAMADA DE APLICAÇÃO (ES6 Modules)
+│   ├── config.js                         # Constantes globais, caminhos base e ícones por extensão
+│   ├── data.js                           # [DATA] Matriz de dados (Ativos físicos + Atalhos dinâmicos)
+│   ├── renderers.js                      # [VIEWER] Motores de renderização (PDF, Excel, Video, Code, Img, DOCX, Cards)
+│   ├── ui.js                             # [CONTROLLER] Lógica da árvore interativa, busca e interface
+│   └── main.js                           # [BOOTSTRAP] Ponto de entrada de inicialização
 │
-├── 🌐 SEÇÕES VIRTUAIS & ATALHOS EM NUVEM (MAPEADOS VIA DATA/JS)
-│   ├── posicionamento-digital/   # 📌 Redes Sociais, GitHub, E-mails oficiais e Mídias
-│   ├── pesquisa-cliente-forms/   # 📋 Catálogo de 23 Formulários e Respostas do Microsoft Forms / OneDrive
-│   ├── benchmarking-produto/     # 💡 Requisitos SaaS (Doc com link Google Docs + Video Player YouTube)
-│   └── sistemas/                 # ⚙️ Infraestrutura, Hospedagem e DNS (Netlify & GoDaddy)
-│       ├── netlify/              #    -> Deploys, Zonas de DNS, SSL e Docs do Netlify
-│       └── godaddy/              #    -> Criador de Sites e Servidores GoDaddy
 │
-└── assets/                       # 📦 CONTÊINER OFICIAL DE ATIVOS FÍSICOS
-    ├── arquivos/                 # Documentos institucionais, cadastros e insumos de dev
-    │   ├── banco-dados/          # Documentação OpenAPI/Swagger e schemas relacionais
-    │   ├── forms/                # Respostas de formulários (.xlsx) de embarcadores e motoristas
-    │   ├── json-dados/           # Componentes e mocks estáticos de validação (.js / .json)
-    │   ├── live/                 # Registros de reuniões e alinhamentos
-    │   ├── parceiros/            # Atas (.docx) e acordos comerciais com parceiros
-    │   ├── pitch/                # Apresentações de Pitch Deck (.pdf) e roteiros (.docx)
-    │   ├── prototipo/            # Prompts e especificações de prototipagem (.docx / Lovable)
-    │   ├── qa-infos/             # Screenshots, legendas de mapa e evidências de testes de UI
-    │   ├── qa-refs/              # Tabelas de tamanhos de caminhões e referências visuais
-    │   ├── qa-v5/                # Fluxos funcionais e matrizes da versão 5
-    │   ├── supabase/             # Prints de configuração de banco, Auth e RLS no Supabase
-    │   └── vaga-dev/             # Desafios técnicos e requisitos para contratação de devs
+└── assets/                               # 📦 CONTÊINER OFICIAL DE ATIVOS FÍSICOS
+    ├── arquivos/                         # Documentos base e insumos de engenharia/negócios
+    │   ├── banco-dados/                  # Especificações OpenAPI/Swagger e schemas
+    │   ├── forms/                        # Respostas de pesquisas em .xlsx
+    │   ├── json-dados/                   # Mocks e componentes de código (.js / .json)
+    │   ├── parceiros/                    # Atas de reunião e acordos comerciais (.docx)
+    │   ├── pitch/                        # Pitch decks (.pdf) e roteiros (.docx)
+    │   ├── prototipo/                    # Prompts e especificação de prototipagem (.docx / Lovable)
+    │   ├── qa-v5/                        # Fluxos funcionais da versão 5
+    │   ├── supabase/                     # Prints de configuração de banco, Auth e RLS no Supabase
+    │   ├── vaga-dev/                     # Desafios técnicos de contratação de devs
+    │   └── 🌐 SEÇÕES VIRTUAIS & ATALHOS EM NUVEM (MAPEADOS VIA DATA/JS)
+    │       ├── posicionamento-digital/           # 📌 Redes Sociais, GitHub, E-mails oficiais e Mídias
+    │       ├── pesquisa-cliente-forms/           # 📋 Catálogo de 23 Formulários e Respostas do Microsoft Forms / OneDrive
+    │       ├── benchmarking-produto/             # 💡 Requisitos SaaS (Doc com link Google Docs + Video Player YouTube)
+    │       └── sistemas/                         # ⚙️ Infraestrutura, Hospedagem e DNS (Netlify & GoDaddy)
+    │            ├── netlify/                      #    -> Deploys, Zonas de DNS, SSL e Docs do Netlify
+    │            └── godaddy/                      #    -> Criador de Sites e Servidores GoDaddy
+    ├── quero-carregar-transportador/     # Persona 1: Caminhoneiro / Motorista
+    │   ├── anunciar-caminhao/            # Screenshots do fluxo de oferta de frota
+    │   ├── buscar-carga/                 # Vitrine e busca de cargas/fretes
+    │   ├── marca-transportador/          # Identidade visual e marcas auxiliares do transportador
+    │   ├── persona/                      # Fotos e depoimentos da persona Motorista
+    │   └── vantagem/                     # Cards visuais de benefícios para o caminhoneiro
     │
-    ├── inspiracoes/              # Referências visuais e banco de ideias
-    │   ├── arts/                 # UI/UX de plataformas de transporte e fotos de veículos
-    │   └── mkt-campanhas/        # Artes para campanhas de frete residencial e comercial
+    ├── quero-transportar-embarcador/     # Persona 2: Embarcador / Empresa Contratante
+    │   ├── anunciar-carga/               # Cadastro e publicação de ofertas de carga
+    │   ├── buscar-caminhao/              # Vitrine de busca de caminhões/frotas
+    │   ├── marca-embarcador/             # Identidade visual e mídias da empresa
+    │   ├── persona-embarcador/           # Fotos e dados da persona Empresa
+    │   └── vantagem-embarcador/          # Cards visuais de benefícios para o embarcador
     │
-    ├── midias/                   # Arquivos de vídeo e mídia rica
-    │   └── videos/               # Releases oficiais, demos de navegação e testes de campo
-    │
-    ├── quero-carregar-transportador/ # Persona 1: Caminhoneiro / Motorista Autônomo
-    │   ├── anunciar-caminhao/    # Screenshots e fotos do fluxo de oferta de frota
-    │   ├── buscar-carga/         # Visual da vitrine e lista de cargas disponíveis
-    │   ├── persona/              # Fotos, avatares e depoimentos da persona Motorista
-    │   ├── public/               # Favicons e manifestos PWA do módulo
-    │   └── vantagem/             # Cards visuais das vantagens para o caminhoneiro
-    │
-    ├── quero-transportar-embarcador/ # Persona 2: Embarcador / Empresa / Contratante
-    │   ├── anunciar-carga/       # Visual do cadastro de frete e categorias de cargas
-    │   ├── buscar-caminhao/      # Visual da vitrine de frotas e caminhões disponíveis
-    │   ├── persona/              # Avatares e perfis da persona Embarcador
-    │   ├── public/               # Favicons e manifestos PWA do módulo
-    │   └── vantagem/             # Cards visuais das vantagens para o embarcador
-    │
-    └── voltaexpressbrasil/       # Branding, Identidade Visual & Campanhas
-        ├── assets/               # Logotipos e marcas auxiliares do ecossistema
-        ├── public/               # Manifestos e favicons institucionais
-        ├── veb-logo/             # Assinaturas e logos em alta resolução (PNG, ICO, SVG)
-        ├── veb-mkt-1/            # Peças da Campanha MKT 01 (WhatsApp e redes sociais)
-        ├── veb-mkt-2/            # Peças da Campanha MKT 02 e diagrama de fluxo
-        ├── veb-mkt-3/            # Galeria conceitual de frotas, rodovias e rotas
-        └── veb-painel/           # Imagens conceituais para composição do painel
+    └── voltaexpressbrasil/               # Central de Branding, Mídias e Institucional
+        ├── inspiracoes/                  # Referências visuais do ecossistema
+        │   ├── arts/                     # UI/UX de transporte e fotos de veículos
+        │   └── mkt-campanhas/            # Artes para tráfego e campanhas
+        ├── live/                         # Registros e gravações de reuniões corporativas
+        ├── midias/                       # Vídeos ricos e demos
+        │   └── videos/                   # Releases oficiais, gravações e demos (.mp4)
+        ├── qa-infos/                     # Screenshots, legendas e evidências de testes de UI
+        ├── qa-refs/                      # Tabelas de dimensões e tipos de caminhões
+        ├── veb-assets/                   # Elementos visuais complementares da marca
+        ├── veb-logo/                     # Logotipos oficiais em alta resolução (PNG, SVG, ICO)
+        ├── veb-mkt-1/                    # Peças da Campanha MKT 01
+        ├── veb-mkt-2/                    # Peças da Campanha MKT 02
+        ├── veb-mkt-3/                    # Galeria conceitual de frotas e rodovias
+        ├── veb-painel/                   # Imagens conceituais para composição do painel
+        └── veb-public/                   # Favicons e manifestos PWA
 ```
 
 ---
