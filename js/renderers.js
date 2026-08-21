@@ -137,9 +137,18 @@ export const Renderers = {
    * Renderiza a Grid de Imagens quando a pasta qa-infos for clicada
    */
   renderFolderGrid(folder, container) {
+    if (folder.name === "benchmarking-produto") {
+      this.renderBenchmarkingGrid(folder, container);
+      return;
+    }
 
     if (folder.name === "posicionamento-digital") {
       this.renderSocialGrid(folder, container);
+      return;
+    }
+
+    if (folder.name === "pesquisa-cliente-forms") {
+      this.renderFormsGrid(folder, container);
       return;
     }
 
@@ -177,6 +186,217 @@ export const Renderers = {
             </div>
           </div>
         `).join('')}
+      </div>
+    `;
+  },
+  // 2. Renderizador da Grid da pasta Benchmarking
+  renderBenchmarkingGrid(folder, container) {
+    const targetArea = container || document.getElementById("viewerContainer");
+    if (!targetArea) return;
+
+    const items = folder.children || [];
+
+    targetArea.innerHTML = `
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-2">
+      ${items.map((item, index) => {
+      const isVideo = item.ext === "video";
+      const icon = isVideo ? "fa-youtube text-red-600" : "fa-file-lines text-blue-600";
+      const badgeColor = isVideo ? "bg-red-50 text-red-700 border-red-200" : "bg-blue-50 text-blue-700 border-blue-200";
+
+      return `
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-blue-400 transition flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-2xl group-hover:scale-110 transition duration-200">
+                  <i class="fa-solid ${icon}"></i>
+                </div>
+                <span class="text-[10px] font-mono font-semibold px-2.5 py-1 rounded border ${badgeColor}">
+                  ${item.category}
+                </span>
+              </div>
+              <h4 class="text-base font-bold text-slate-900 mb-2">${item.name}</h4>
+              <p class="text-xs text-slate-600 leading-relaxed mb-6">${item.insight}</p>
+            </div>
+
+            <button onclick="window.uiController.openBenchmarkingItem(${index})"
+                    class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white text-xs font-semibold py-3 px-4 rounded-lg transition duration-150 shadow-sm">
+              <span>${isVideo ? "Assistir Vídeo Internamente" : "Visualizar Documentação Completa"}</span>
+              <i class="fa-solid ${isVideo ? 'fa-play' : 'fa-arrow-right'} text-[10px]"></i>
+            </button>
+          </div>
+        `;
+    }).join('')}
+    </div>
+  `;
+  },
+
+  // 3. Renderizador do Documento Formatado (Card 1)
+  renderBenchmarkingDoc(container) {
+    container.innerHTML = `
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200 my-4 text-slate-800 font-sans leading-relaxed space-y-8">
+      
+      <!-- Cabeçalho -->
+      <div class="border-b border-slate-200 pb-6">
+        <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-blue-100">
+          <i class="fa-solid fa-lightbulb"></i> Benchmarking de Produto SaaS
+        </div>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Especificação de Requisitos: Plataforma de Auxílio ao Transporte</h2>
+        <p class="text-xs text-slate-500 font-mono mt-2">Documentação Técnica & Modelo de Negócios</p>
+      </div>
+
+      <!-- Objetivos -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-bullseye text-blue-600"></i> 1. Objetivo do Produto
+        </h3>
+        <p class="text-sm text-slate-600 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+          Esta plataforma visa conectar diretamente <strong>Embarcadores (Clientes)</strong> e <strong>Caminhoneiros (Motoristas)</strong> para cotação e contratação de fretes. A monetização é baseada no modelo <strong>SaaS / Assinatura</strong>, exigindo plano ativo para liberação de contatos de ambas as partes.
+        </p>
+      </section>
+
+      <!-- Tipos de Usuários -->
+      <section class="space-y-4">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-users text-blue-600"></i> 2. Perfis de Usuário
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">Administrador</span>
+            <p class="text-xs text-slate-600 mt-2">Gestão total, aprovação prévia de anúncios de frete/veículos e gerenciamento de planos de assinatura.</p>
+          </div>
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">Embarcador (Cliente)</span>
+            <p class="text-xs text-slate-600 mt-2">Publica demandas de transporte e busca motoristas disponíveis na região.</p>
+          </div>
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Motorista (Caminhoneiro)</span>
+            <p class="text-xs text-slate-600 mt-2">Cadastra veículo, capacidade de carga, documentação e visualiza solicitações de frete.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modelo de Assinatura -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-credit-card text-blue-600"></i> 3. Modelo de Receita & Assinaturas
+        </h3>
+        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
+          <li><strong>Degustação Inicial:</strong> 1º mês gratuito para atração de novos usuários.</li>
+          <li><strong>Cobrança recorrente:</strong> Pagamento via Gateway Integrado ou Carteira do Sistema.</li>
+          <li><strong>Acesso Privilegiado:</strong> Dados de contato e detalhes do anúncio ficam <em>desfocados (blurred)</em> para usuários sem plano ativo.</li>
+        </ul>
+      </section>
+
+      <!-- Processo de Cadastro -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-user-plus text-blue-600"></i> 4. Fluxo de Cadastro e Validação
+        </h3>
+        <div class="bg-blue-50/60 border border-blue-100 rounded-xl p-4 text-xs text-slate-700 space-y-2">
+          <p><strong>Autenticação via OTP (SMS/WhatsApp)</strong> para confirmação de número de telefone e Social Login via Google.</p>
+          <p><strong>Validação pelo Admin:</strong> Motoristas passam por checagem obrigatória de documento de identidade e comprovante do veículo antes da liberação da conta.</p>
+        </div>
+      </section>
+
+      <!-- Cadastro de Anúncios -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-truck-ramp-box text-blue-600"></i> 5. Cadastro de Demandas & Veículos
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 border border-slate-200 rounded-xl">
+            <strong class="text-slate-900 block mb-2 font-semibold">Demandas do Embarcador:</strong>
+            <p class="text-slate-600">Nome do frete, Imagem da carga, Dimensões, Peso, Endereço de Coleta (Sem PIN do Google) e Status (Ativo/Inativo).</p>
+          </div>
+          <div class="p-4 border border-slate-200 rounded-xl">
+            <strong class="text-slate-900 block mb-2 font-semibold">Perfil do Motorista:</strong>
+            <p class="text-slate-600">Nome, Foto do veículo, Capacidade volumétrica, Cidade/CEP de atuação e Status de disponibilidade.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exibição no Site / Mapa -->
+      <section class="space-y-3 pb-4">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-map-location-dot text-blue-600"></i> 6. Exibição Web & Visualização em Mapa
+        </h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          O mapa exibe apenas <strong>PINs de localização por cidade/região</strong>. Informações sensíveis do frete ou do motorista aparecem protegidas/desfocadas até a confirmação da assinatura ativa.
+        </p>
+      </section>
+
+    </div>
+  `;
+  },
+
+  // 4. Renderizador do Player de Vídeo Embedded (Card 2)
+  renderBenchmarkingVideo(container) {
+    container.innerHTML = `
+    <div class="max-w-5xl mx-auto my-4 bg-slate-900 rounded-2xl shadow-xl border border-slate-800 overflow-hidden flex flex-col">
+      <div class="bg-slate-950 px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
+          <span class="text-sm font-bold text-white">Análise de Referência do Ecossistema</span>
+        </div>
+        <span class="text-xs font-mono text-red-400 bg-red-950/60 px-2.5 py-1 rounded border border-red-800/40">Player Interno</span>
+      </div>
+      <div class="relative w-full aspect-video bg-black">
+        <iframe src="https://www.youtube.com/embed/GiCqtnedveg?autoplay=1" 
+                title="Benchmarking Video" 
+                class="absolute top-0 left-0 w-full h-full border-0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  `;
+  },
+  renderFormsGrid(folder, container) {
+    const targetArea = container || document.getElementById("viewerContainer") || document.getElementById("main-content");
+    if (!targetArea) return;
+
+    const items = folder.children || [];
+
+    targetArea.innerHTML = `
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-2">
+        ${items.map(item => {
+      let icon = "fa-wpforms";
+      let iconColor = "text-teal-600";
+      let badgeColor = "bg-teal-50 text-teal-700 border-teal-200";
+
+      if (item.category === "Respostas") {
+        icon = "fa-file-excel";
+        iconColor = "text-emerald-600";
+        badgeColor = "bg-emerald-50 text-emerald-700 border-emerald-200";
+      } else if (item.category === "Edição") {
+        icon = "fa-pen-to-square";
+        iconColor = "text-amber-600";
+        badgeColor = "bg-amber-50 text-amber-700 border-amber-200";
+      }
+
+      return `
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md hover:border-blue-300 transition flex flex-col justify-between group">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-xl ${iconColor} group-hover:scale-110 transition duration-200">
+                    <i class="fa-solid ${icon}"></i>
+                  </div>
+                  <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded border ${badgeColor}">
+                    ${item.category || 'Forms'}
+                  </span>
+                </div>
+                <h4 class="text-sm font-bold text-slate-800 mb-1.5">${item.name}</h4>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4 line-clamp-3">${item.insight || ''}</p>
+              </div>
+
+              <a href="${item.url}" target="_blank" rel="noopener noreferrer" 
+                 class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white text-xs font-medium py-2.5 px-3 rounded-lg transition duration-150 shadow-sm">
+                <span>Abrir Link Externo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          `;
+    }).join('')}
       </div>
     `;
   },
@@ -258,9 +478,9 @@ export const Renderers = {
     }
   },
 
-/**
-   * Renderiza a Grid de Canais e Redes Sociais da pasta posicionamento-digital
-   */
+  /**
+     * Renderiza a Grid de Canais e Redes Sociais da pasta posicionamento-digital
+     */
   renderSocialGrid(folder, container) {
     const targetArea = container || document.getElementById("viewerContainer") || document.getElementById("main-content");
     if (!targetArea) return;
@@ -270,11 +490,11 @@ export const Renderers = {
     targetArea.innerHTML = `
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-2">
         ${items.map(item => {
-          // Trata ícones da marca (FontAwesome Brands vs Solid)
-          const isBrandIcon = !item.icon.includes('envelope') && !item.icon.includes('paper-plane');
-          const iconPrefix = isBrandIcon ? 'fa-brands' : 'fa-solid';
+      // Trata ícones da marca (FontAwesome Brands vs Solid)
+      const isBrandIcon = !item.icon.includes('envelope') && !item.icon.includes('paper-plane');
+      const iconPrefix = isBrandIcon ? 'fa-brands' : 'fa-solid';
 
-          return `
+      return `
             <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md hover:border-blue-300 transition flex flex-col justify-between group">
               <div>
                 <div class="flex items-center justify-between mb-3">
@@ -296,9 +516,118 @@ export const Renderers = {
               </a>
             </div>
           `;
-        }).join('')}
+    }).join('')}
       </div>
     `;
+  },
+
+  renderBenchmarkingDoc(container) {
+    const docUrl = "https://docs.google.com/document/d/1Ed-TkNVTAiny1Xiv3xlV9W00PTxt2zCB0k7mBfadyoc/edit?tab=t.0";
+
+    container.innerHTML = `
+    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200 my-4 text-slate-800 font-sans leading-relaxed space-y-8">
+      
+      <!-- Cabeçalho com Link para Documento Original -->
+      <div class="border-b border-slate-200 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-blue-100">
+            <i class="fa-solid fa-lightbulb"></i> Benchmarking de Produto SaaS
+          </div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Especificação de Requisitos: Plataforma de Auxílio ao Transporte</h2>
+          <p class="text-xs text-slate-500 font-mono mt-2">Documentação Técnica & Modelo de Negócios</p>
+        </div>
+
+        <a href="${docUrl}" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold py-2.5 px-4 rounded-lg border border-slate-300 transition duration-150 shrink-0 self-start md:self-auto shadow-sm">
+          <i class="fa-solid fa-file-word text-blue-600 text-sm"></i>
+          <span>Abrir Doc Original</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-500"></i>
+        </a>
+      </div>
+
+      <!-- Objetivos -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-bullseye text-blue-600"></i> 1. Objetivo do Produto
+        </h3>
+        <p class="text-sm text-slate-600 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+          Esta plataforma visa conectar diretamente <strong>Embarcadores (Clientes)</strong> e <strong>Caminhoneiros (Motoristas)</strong> para cotação e contratação de fretes. A monetização é baseada no modelo <strong>SaaS / Assinatura</strong>, exigindo plano ativo para liberação de contatos de ambas as partes.
+        </p>
+      </section>
+
+      <!-- Tipos de Usuários -->
+      <section class="space-y-4">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-users text-blue-600"></i> 2. Perfis de Usuário
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">Administrador</span>
+            <p class="text-xs text-slate-600 mt-2">Gestão total, aprovação prévia de anúncios de frete/veículos e gerenciamento de planos de assinatura.</p>
+          </div>
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">Embarcador (Cliente)</span>
+            <p class="text-xs text-slate-600 mt-2">Publica demandas de transporte e busca motoristas disponíveis na região.</p>
+          </div>
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Motorista (Caminhoneiro)</span>
+            <p class="text-xs text-slate-600 mt-2">Cadastra veículo, capacidade de carga, documentação e visualiza solicitações de frete.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modelo de Assinatura -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-credit-card text-blue-600"></i> 3. Modelo de Receita & Assinaturas
+        </h3>
+        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
+          <li><strong>Degustação Inicial:</strong> 1º mês gratuito para atração de novos usuários.</li>
+          <li><strong>Cobrança recorrente:</strong> Pagamento via Gateway Integrado ou Carteira do Sistema.</li>
+          <li><strong>Acesso Privilegiado:</strong> Dados de contato e detalhes do anúncio ficam <em>desfocados (blurred)</em> para usuários sem plano ativo.</li>
+        </ul>
+      </section>
+
+      <!-- Processo de Cadastro -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-user-plus text-blue-600"></i> 4. Fluxo de Cadastro e Validação
+        </h3>
+        <div class="bg-blue-50/60 border border-blue-100 rounded-xl p-4 text-xs text-slate-700 space-y-2">
+          <p><strong>Autenticação via OTP (SMS/WhatsApp)</strong> para confirmação de número de telefone e Social Login via Google.</p>
+          <p><strong>Validação pelo Admin:</strong> Motoristas passam por checagem obrigatória de documento de identidade e comprovante do veículo antes da liberação da conta.</p>
+        </div>
+      </section>
+
+      <!-- Cadastro de Anúncios -->
+      <section class="space-y-3">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-truck-ramp-box text-blue-600"></i> 5. Cadastro de Demandas & Veículos
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 border border-slate-200 rounded-xl">
+            <strong class="text-slate-900 block mb-2 font-semibold">Demandas do Embarcador:</strong>
+            <p class="text-slate-600">Nome do frete, Imagem da carga, Dimensões, Peso, Endereço de Coleta (Sem PIN do Google) e Status (Ativo/Inativo).</p>
+          </div>
+          <div class="p-4 border border-slate-200 rounded-xl">
+            <strong class="text-slate-900 block mb-2 font-semibold">Perfil do Motorista:</strong>
+            <p class="text-slate-600">Nome, Foto do veículo, Capacidade volumétrica, Cidade/CEP de atuação e Status de disponibilidade.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Exibição no Site / Mapa -->
+      <section class="space-y-3 pb-4">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-map-location-dot text-blue-600"></i> 6. Exibição Web & Visualização em Mapa
+        </h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          O mapa exibe apenas <strong>PINs de localização por cidade/região</strong>. Informações sensíveis do frete ou do motorista aparecem protegidas/desfocadas até a confirmação da assinatura ativa.
+        </p>
+      </section>
+
+    </div>
+  `;
   }
 };
 

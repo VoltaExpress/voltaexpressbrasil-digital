@@ -3,10 +3,11 @@ import { fileData } from "./data.js";
 import { Renderers } from "./renderers.js";
 
 export class UIController {
-    constructor() {
+   constructor() {
         this.treeContainer = document.getElementById("treeContainer");
         this.searchInput = document.getElementById("fileSearch");
-        this.currentSelectedFile = null;
+        this.currentSelectedFile = null; 
+        window.uiController = this;
     }
 
     init() {
@@ -62,7 +63,9 @@ export class UIController {
             "veb-mkt-2",
             "veb-mkt-3",
             "veb-painel",
-            "posicionamento-digital"
+            "posicionamento-digital",
+            "pesquisa-cliente-forms",
+            "benchmarking-produto"
         ];
 
         nodes.forEach(node => {
@@ -311,6 +314,17 @@ export class UIController {
         if (menuBtn) menuBtn.addEventListener('click', openSidebar);
         if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
         if (overlay) overlay.addEventListener('click', closeSidebar);
+    }
+
+    openBenchmarkingItem(index) {
+        const container = document.getElementById("viewerContainer");
+        if (!container) return;
+
+        if (index === 0) {
+            Renderers.renderBenchmarkingDoc(container);
+        } else if (index === 1) {
+            Renderers.renderBenchmarkingVideo(container);
+        }
     }
 }
 

@@ -522,5 +522,57 @@ export const fileData = [
             { name: "Facebook - Persona", type: "file", ext: "social", icon: "fa-facebook-f", color: "text-blue-700", url: "https://www.facebook.com/profile.php?id=61590155552634", insight: "Perfil focado em interação direta com grupos de caminhoneiros e embarcadores." },
             { name: "TikTok", type: "file", ext: "social", icon: "fa-tiktok", color: "text-slate-900", url: "https://www.tiktok.com/@voltaexpressbrasil", insight: "Conta oficial para vídeos curtos e conteúdos dinâmicos de bastidores." }
         ]
+    },
+    {
+        name: "pesquisa-cliente-forms",
+        type: "folder",
+        children: [
+            { name: "Complete sua viagem", type: "link", category: "Produção", url: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkW...", insight: "Formulário de captação para viabilização e rotas de viagens." },
+            { name: "Complete sua viagem.xlsx - RESPOSTAS", type: "link", category: "Respostas", url: "https://onedrive.live.com/edit?id=349D41F7A84881F3!s3892e50...", insight: "Planilha consolidada de respostas recebidas do formulário Complete sua Viagem." },
+            { name: "Anúncie sua Carga", type: "link", category: "Produção", url: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkW...", insight: "Formulário de captação de ofertas de cargas de embarcadores." },
+            { name: "Anúncie sua Carga 1.xlsx - RESPOSTAS", type: "link", category: "Respostas", url: "https://onedrive.live.com/edit?id=349D41F7A84881F3!sbab73a7...", insight: "Base de dados das ofertas de cargas anunciadas." },
+            { name: "Cadastro", type: "link", category: "Produção", url: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkW...", insight: "Formulário geral de cadastro da plataforma." },
+            { name: "Cadastro.xlsx - RESPOSTAS", type: "link", category: "Respostas", url: "https://onedrive.live.com/edit?id=349D41F7A84881F3!s57332ee...", insight: "Base com todos os cadastros realizados." },
+            { name: "Microsoft Forms - Volta Express", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?origin=shel...", insight: "Painel de design do formulário institucional da Volta Express." },
+            { name: "Anúnciar disponibilidade - Volta Express", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin...", insight: "Painel de edição do formulário de disponibilidade de frete." },
+            { name: "Microsoft Forms - Douglas", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?m2=1&anal...", insight: "Ambiente de testes e rascunhos no Microsoft Forms." },
+            { name: "Junte-se a todos nós - CADASTRO - Produção", type: "link", category: "Produção", url: "https://forms.office.com/Pages/ResponsePage.aspx?id=fXmzFx...", insight: "Formulário público de onboarding e cadastro em produção." },
+            { name: "Junte-se a todos nós - CADASTRO - Produção - edição", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?origin=Sha...", insight: "Painel de edição da pesquisa de cadastro." },
+            { name: "Anuncie sua Carga - ANUNCIAR - Produção", type: "link", category: "Produção", url: "https://forms.office.com/Pages/ResponsePage.aspx?id=fXmzFx...", insight: "Formulário final de anúncios de cargas em produção." },
+            { name: "Anúncie sua Carga - ANUNCIAR - Produção - edição", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?origin=Sha...", insight: "Painel de gerenciamento do formulário de cargas." },
+            { name: "Anuncie sua carga - ANUNCIAR - v1 - edição", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?origin=Sha...", insight: "Versão preliminar (v1) do formulário de cargas." },
+            { name: "Complete sua viagem - TRANSPORTAR - Produção", type: "link", category: "Produção", url: "https://forms.office.com/Pages/ResponsePage.aspx?id=fXmzFx...", insight: "Formulário público focado em transportadores/caminhoneiros em produção." },
+            { name: "Complete sua viagem - TRANSPORTAR - Produção - edição", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?origin=Neo...", insight: "Edição e ajustes da pesquisa de transportadores." },
+            { name: "Complete sua viagem - TRANSPORTAR - v1", type: "link", category: "Produção", url: "https://forms.office.com/pages/responsepage.aspx?id=fXmzFxZ...", insight: "Versão 1 da pesquisa de viagem para transportadores." },
+            { name: "Complete sua viagem - TRANSPORTAR - v1 - edição", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?origin=Sha...", insight: "Edição da versão 1 do formulário de transporte." },
+            { name: "Encontre caminhoneiros - TRANSPORTADORA - Produção", type: "link", category: "Produção", url: "https://forms.office.com/Pages/ResponsePage.aspx?id=fXmzFx...", insight: "Formulário de captação para transportadoras parceiras." },
+            { name: "Encontre caminhoneiros - TRANSPORTADORA - Produção - edição", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin...", insight: "Edição do formulário de transportadoras." },
+            { name: "Encontre caminhoneiros - TRANSPORTADORA - v1", type: "link", category: "Produção", url: "https://forms.office.com/pages/responsepage.aspx?id=fXmzFxZ...", insight: "Primeira versão da captação de transportadoras." },
+            { name: "Encontre caminhoneiros - TRANSPORTADORA - v1 - edição", type: "link", category: "Edição", url: "https://forms.office.com/Pages/DesignPageV2.aspx?origin=Sha...", insight: "Painel de edição da v1 de transportadoras." },
+            { name: "Entrevista com Caminhoneiro", type: "link", category: "Produção", url: "https://forms.office.com/pages/responsepage.aspx?id=fXmzFxZ...", insight: "Formulário de pesquisa qualitativa e entrevistas com motoristas de frete." }
+        ]
+    },
+    {
+  name: "benchmarking-produto",
+  type: "folder",
+  path: "benchmarking-produto",
+  children: [
+    {
+      name: "Especificação do Modelo de Negócios - Plataforma de Frete SaaS",
+      type: "file",
+      ext: "doc",
+      category: "Documento de Produto",
+      url: "https://docs.google.com/document/d/1Ed-TkNVTAiny1Xiv3xlV9W00PTxt2zCB0k7mBfadyoc/edit?tab=t.0",
+      insight: "Mapeamento detalhado de regras de negócio, modelo de assinatura, perfis (Embarcador, Caminhoneiro e Admin) e fluxo de fretes."
+    },
+    {
+      name: "Análise de Referência do Ecossistema (Vídeo)",
+      type: "file",
+      ext: "video",
+      url: "https://www.youtube.com/embed/GiCqtnedveg",
+      category: "Benchmarking Vídeo",
+      insight: "Vídeo de referência sobre arquitetura de produto e solução de logística."
     }
+  ]
+}
 ];
